@@ -2,7 +2,7 @@
 //  LibreTranslateApp.swift
 //  LibreTranslate
 //
-//  Created by vktr on 12.08.2022.
+//  Created by Viktor Kalyniuk on 12.08.2022.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct LibreTranslateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
