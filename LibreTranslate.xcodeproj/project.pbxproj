@@ -32,6 +32,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E30530528A69EE3004B6B49 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4E4E5CCA28A69D76005B5195 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4E30530728A69F09004B6B49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E4E5CCC28A69D77005B5195 /* Assets.xcassets */,
+				4E4E5CCE28A69D77005B5195 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E30530928A69FBB004B6B49 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4E4E5CC828A69D76005B5195 /* LibreTranslateApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		4E4E5CBC28A69D76005B5195 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +76,9 @@
 		4E4E5CC728A69D76005B5195 /* LibreTranslate */ = {
 			isa = PBXGroup;
 			children = (
-				4E4E5CC828A69D76005B5195 /* LibreTranslateApp.swift */,
-				4E4E5CCA28A69D76005B5195 /* ContentView.swift */,
-				4E4E5CCC28A69D77005B5195 /* Assets.xcassets */,
-				4E4E5CCE28A69D77005B5195 /* Preview Content */,
+				4E30530928A69FBB004B6B49 /* Application */,
+				4E30530528A69EE3004B6B49 /* Presentation */,
+				4E30530728A69F09004B6B49 /* Resources */,
 			);
 			path = LibreTranslate;
 			sourceTree = "<group>";
@@ -266,15 +290,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LibreTranslate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LibreTranslate/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Q4KRU37RTG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,15 +321,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LibreTranslate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LibreTranslate/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Q4KRU37RTG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +341,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
