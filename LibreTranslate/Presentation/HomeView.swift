@@ -8,17 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var input: String = ""
-
     var body: some View {
         VStack {
-            ChooseLanguagesView()
-            TextEditor(text: $input)
-                .onChange(of: input, perform: { newValue in
-                    print("\(input)")
-                })
-                .padding()
-            TextEditor(text: /*@START_MENU_TOKEN@*/.constant("Placeholder")/*@END_MENU_TOKEN@*/)
+            OutputTranslationView()
+            InputTranslationView()
         }
         .padding()
     }

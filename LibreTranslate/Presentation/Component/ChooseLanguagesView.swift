@@ -22,7 +22,8 @@ struct ChooseLanguagesView: View {
             Button {
                 (firstSelection, secondSelection) = (secondSelection, firstSelection)
             } label: {
-                Image(systemName: SystemNames.shuffle)
+                Image(systemName: SystemNames.swap)
+                    .rotationEffect(.degrees(-Double(Numbers.ninety)))
             }
             Spacer()
             Picker(selection: $secondSelection, label: Text("Language")) {

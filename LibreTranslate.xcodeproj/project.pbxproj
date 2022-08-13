@@ -14,6 +14,9 @@
 		4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */; };
 		4E8E26B128A6B8720075598D /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B028A6B8720075598D /* Languages.swift */; };
 		4E8E26B728A6E9BE0075598D /* SystemNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B628A6E9BE0075598D /* SystemNames.swift */; };
+		4E8E26B928A7A2FB0075598D /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B828A7A2FB0075598D /* Numbers.swift */; };
+		4E8E26BB28A7B92C0075598D /* OutputTranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */; };
+		4E8E26BD28A7BA770075598D /* InputTranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26BC28A7BA770075598D /* InputTranslationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguagesView.swift; sourceTree = "<group>"; };
 		4E8E26B028A6B8720075598D /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		4E8E26B628A6E9BE0075598D /* SystemNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNames.swift; sourceTree = "<group>"; };
+		4E8E26B828A7A2FB0075598D /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputTranslationView.swift; sourceTree = "<group>"; };
+		4E8E26BC28A7BA770075598D /* InputTranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTranslationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */,
+				4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */,
+				4E8E26BC28A7BA770075598D /* InputTranslationView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			children = (
 				4E8E26B028A6B8720075598D /* Languages.swift */,
 				4E8E26B628A6E9BE0075598D /* SystemNames.swift */,
+				4E8E26B828A7A2FB0075598D /* Numbers.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -186,11 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8E26BB28A7B92C0075598D /* OutputTranslationView.swift in Sources */,
 				4E8E26B728A6E9BE0075598D /* SystemNames.swift in Sources */,
 				4E4E5CCB28A69D76005B5195 /* HomeView.swift in Sources */,
+				4E8E26B928A7A2FB0075598D /* Numbers.swift in Sources */,
 				4E4E5CC928A69D76005B5195 /* LibreTranslateApp.swift in Sources */,
 				4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */,
 				4E8E26B128A6B8720075598D /* Languages.swift in Sources */,
+				4E8E26BD28A7BA770075598D /* InputTranslationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
