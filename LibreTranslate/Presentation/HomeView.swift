@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var selection: LanguagesSelection = LanguagesSelection()
+    
     var body: some View {
         VStack {
-            OutputTranslationView()
-            InputTranslationView()
+            OutputTranslationView().environmentObject(selection)
+            InputTranslationView().environmentObject(selection)
         }
         .padding()
     }

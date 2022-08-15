@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct ChooseLanguagesView: View {
-    @State private var firstSelection: Languages = .uk
-    @State private var secondSelection: Languages = .en
+    @ObservedObject var selection: LanguagesSelection
 
     var body: some View {
         HStack {
-            Picker(selection: $firstSelection, label: Text("Language")) {
+            Picker(selection: $selection.input, label: Text("Language")) {
                 ForEach(Languages.allCases, id: \.self) { language in
                     Text(language.rawValue).tag(language)
                 }
             }
             Spacer()
             Button {
-                (firstSelection, secondSelection) = (secondSelection, firstSelection)
+                (selection.input, selection.output) = (selection.output, selection.input)
             } label: {
                 Image(systemName: SystemNames.swap)
                     .rotationEffect(.degrees(-Double(Numbers.ninety)))
             }
             Spacer()
-            Picker(selection: $secondSelection, label: Text("Language")) {
+            Picker(selection: $selection.output, label: Text("Language")) {
                 ForEach(Languages.allCases, id: \.self) { language in
                     Text(language.rawValue).tag(language)
                 }
@@ -38,6 +37,6 @@ struct ChooseLanguagesView: View {
 
 struct LanguagesPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseLanguagesView()
+        ChooseLanguagesView(selection: LanguagesSelection())
     }
 }

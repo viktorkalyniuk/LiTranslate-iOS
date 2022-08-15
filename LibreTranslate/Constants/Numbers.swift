@@ -8,5 +8,8 @@
 import Foundation
 
 struct Numbers {
+    static let zero: Int = 0
+    static let one: Int = 1
+    
     static let ninety: Int = 90
 }

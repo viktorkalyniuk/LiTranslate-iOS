@@ -17,6 +17,8 @@
 		4E8E26B928A7A2FB0075598D /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B828A7A2FB0075598D /* Numbers.swift */; };
 		4E8E26BB28A7B92C0075598D /* OutputTranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */; };
 		4E8E26BD28A7BA770075598D /* InputTranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26BC28A7BA770075598D /* InputTranslationView.swift */; };
+		4E8E26C028A81B9F0075598D /* SpeechSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26BF28A81B9F0075598D /* SpeechSynthesis.swift */; };
+		4E8E26C328AA7E300075598D /* LanguagesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26C228AA7E300075598D /* LanguagesSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		4E8E26B828A7A2FB0075598D /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputTranslationView.swift; sourceTree = "<group>"; };
 		4E8E26BC28A7BA770075598D /* InputTranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTranslationView.swift; sourceTree = "<group>"; };
+		4E8E26BF28A81B9F0075598D /* SpeechSynthesis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesis.swift; sourceTree = "<group>"; };
+		4E8E26C228AA7E300075598D /* LanguagesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +66,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4E30530928A69FBB004B6B49 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
 		4E4E5CBC28A69D76005B5195 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4E5CC828A69D76005B5195 /* LibreTranslateApp.swift */,
-				4E30530928A69FBB004B6B49 /* Application */,
+				4E8E26BE28A81B7E0075598D /* Application */,
 				4E30530528A69EE3004B6B49 /* Presentation */,
 				4E30530728A69F09004B6B49 /* Resources */,
 				4E8E26AF28A6B8120075598D /* Constants */,
@@ -108,9 +105,7 @@
 		4E8E26AA28A6AE780075598D /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */,
-				4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */,
-				4E8E26BC28A7BA770075598D /* InputTranslationView.swift */,
+				4E8E26C128AA7D4A0075598D /* Languages */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -123,6 +118,25 @@
 				4E8E26B828A7A2FB0075598D /* Numbers.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		4E8E26BE28A81B7E0075598D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4E8E26BF28A81B9F0075598D /* SpeechSynthesis.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4E8E26C128AA7D4A0075598D /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				4E8E26C228AA7E300075598D /* LanguagesSelection.swift */,
+				4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */,
+				4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */,
+				4E8E26BC28A7BA770075598D /* InputTranslationView.swift */,
+			);
+			path = Languages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8E26C328AA7E300075598D /* LanguagesSelection.swift in Sources */,
 				4E8E26BB28A7B92C0075598D /* OutputTranslationView.swift in Sources */,
 				4E8E26B728A6E9BE0075598D /* SystemNames.swift in Sources */,
 				4E4E5CCB28A69D76005B5195 /* HomeView.swift in Sources */,
@@ -202,6 +217,7 @@
 				4E4E5CC928A69D76005B5195 /* LibreTranslateApp.swift in Sources */,
 				4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */,
 				4E8E26B128A6B8720075598D /* Languages.swift in Sources */,
+				4E8E26C028A81B9F0075598D /* SpeechSynthesis.swift in Sources */,
 				4E8E26BD28A7BA770075598D /* InputTranslationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
