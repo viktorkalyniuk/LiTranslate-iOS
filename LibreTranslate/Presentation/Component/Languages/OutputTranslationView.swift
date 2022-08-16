@@ -9,12 +9,12 @@ import SwiftUI
 
 struct OutputTranslationView: View {
     @EnvironmentObject var selection: LanguagesSelection
-    @State private var output: String = "Placeholder"
+    @EnvironmentObject var textData: TextData
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
-                TextEditor(text: $output)
+                TextEditor(text: .constant(textData.output))
                 Button {
                     //TODO: Write logic for saving translation.
                 } label: {
@@ -24,7 +24,7 @@ struct OutputTranslationView: View {
             }
             HStack() {
                 Button {
-                    SpeechSynthesis.play(output, language: selection.output)
+                    SpeechSynthesis.play(textData.output, language: selection.output)
                 } label: {
                     Image(systemName: SystemNames.speakerWave2)
                         .padding()
@@ -39,5 +39,7 @@ struct OutputTranslationView: View {
 struct OutputTranslationView_Previews: PreviewProvider {
     static var previews: some View {
         OutputTranslationView()
+            .environmentObject(LanguagesSelection())
+            .environmentObject(TextData())
     }
 }

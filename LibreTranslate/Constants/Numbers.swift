@@ -2,7 +2,7 @@
 //  Numbers.swift
 //  LibreTranslate
 //
-//  Created by vktr on 13.08.2022.
+//  Created by Viktor Kalyniuk on 13.08.2022.
 //
 
 import Foundation
