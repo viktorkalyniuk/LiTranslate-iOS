@@ -1,6 +1,6 @@
 //
 //  TranslationParsing.swift
-//  LibreTranslate
+//  LiTranslate
 //
 //  Created by Viktor Kalyniuk on 15.08.2022.
 //

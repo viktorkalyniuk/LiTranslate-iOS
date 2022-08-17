@@ -1,6 +1,6 @@
 //
 //  ChooseLanguagesView.swift
-//  LibreTranslate
+//  LiTranslate
 //
 //  Created by Viktor Kalyniuk on 12.08.2022.
 //

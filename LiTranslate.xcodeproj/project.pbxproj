@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E4E5CC928A69D76005B5195 /* LibreTranslateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E5CC828A69D76005B5195 /* LibreTranslateApp.swift */; };
+		4E4E5CC928A69D76005B5195 /* LiTranslateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E5CC828A69D76005B5195 /* LiTranslateApp.swift */; };
 		4E4E5CCB28A69D76005B5195 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E5CCA28A69D76005B5195 /* HomeView.swift */; };
 		4E4E5CCD28A69D77005B5195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E5CCC28A69D77005B5195 /* Assets.xcassets */; };
 		4E4E5CD028A69D77005B5195 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E5CCF28A69D77005B5195 /* Preview Assets.xcassets */; };
@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E4E5CC528A69D76005B5195 /* LibreTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibreTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4E5CC828A69D76005B5195 /* LibreTranslateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreTranslateApp.swift; sourceTree = "<group>"; };
+		4E4E5CC528A69D76005B5195 /* LiTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E4E5CC828A69D76005B5195 /* LiTranslateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiTranslateApp.swift; sourceTree = "<group>"; };
 		4E4E5CCA28A69D76005B5195 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4E4E5CCC28A69D77005B5195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E4E5CCF28A69D77005B5195 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		4E4E5CBC28A69D76005B5195 = {
 			isa = PBXGroup;
 			children = (
-				4E4E5CC728A69D76005B5195 /* LibreTranslate */,
+				4E4E5CC728A69D76005B5195 /* LiTranslate */,
 				4E4E5CC628A69D76005B5195 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,21 +85,21 @@
 		4E4E5CC628A69D76005B5195 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E4E5CC528A69D76005B5195 /* LibreTranslate.app */,
+				4E4E5CC528A69D76005B5195 /* LiTranslate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E4E5CC728A69D76005B5195 /* LibreTranslate */ = {
+		4E4E5CC728A69D76005B5195 /* LiTranslate */ = {
 			isa = PBXGroup;
 			children = (
-				4E4E5CC828A69D76005B5195 /* LibreTranslateApp.swift */,
+				4E4E5CC828A69D76005B5195 /* LiTranslateApp.swift */,
 				4E8E26BE28A81B7E0075598D /* Application */,
 				4E30530528A69EE3004B6B49 /* Presentation */,
 				4E30530728A69F09004B6B49 /* Resources */,
 				4E8E26AF28A6B8120075598D /* Constants */,
 			);
-			path = LibreTranslate;
+			path = LiTranslate;
 			sourceTree = "<group>";
 		};
 		4E4E5CCE28A69D77005B5195 /* Preview Content */ = {
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E4E5CC428A69D76005B5195 /* LibreTranslate */ = {
+		4E4E5CC428A69D76005B5195 /* LiTranslate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E4E5CD328A69D77005B5195 /* Build configuration list for PBXNativeTarget "LibreTranslate" */;
+			buildConfigurationList = 4E4E5CD328A69D77005B5195 /* Build configuration list for PBXNativeTarget "LiTranslate" */;
 			buildPhases = (
 				4E4E5CC128A69D76005B5195 /* Sources */,
 				4E4E5CC228A69D76005B5195 /* Frameworks */,
@@ -174,9 +174,9 @@
 			);
 			dependencies = (
 			);
-			name = LibreTranslate;
+			name = LiTranslate;
 			productName = LibreTranslate;
-			productReference = 4E4E5CC528A69D76005B5195 /* LibreTranslate.app */;
+			productReference = 4E4E5CC528A69D76005B5195 /* LiTranslate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E4E5CC028A69D76005B5195 /* Build configuration list for PBXProject "LibreTranslate" */;
+			buildConfigurationList = 4E4E5CC028A69D76005B5195 /* Build configuration list for PBXProject "LiTranslate" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,7 +207,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E4E5CC428A69D76005B5195 /* LibreTranslate */,
+				4E4E5CC428A69D76005B5195 /* LiTranslate */,
 			);
 		};
 /* End PBXProject section */
@@ -237,7 +237,7 @@
 				4E8E26CA28ABB4DB0075598D /* Links.swift in Sources */,
 				4E8E26CC28ABD9FA0075598D /* TextData.swift in Sources */,
 				4E8E26B928A7A2FB0075598D /* Numbers.swift in Sources */,
-				4E4E5CC928A69D76005B5195 /* LibreTranslateApp.swift in Sources */,
+				4E4E5CC928A69D76005B5195 /* LiTranslateApp.swift in Sources */,
 				4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */,
 				4E8E26B128A6B8720075598D /* Languages.swift in Sources */,
 				4E8E26C028A81B9F0075598D /* SpeechSynthesis.swift in Sources */,
@@ -370,7 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LibreTranslate/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LiTranslate/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Q4KRU37RTG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -386,8 +386,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = viktorkalyniuk.LibreTranslate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = viktorkalyniuk.LiTranslate;
+				PRODUCT_NAME = LiTranslate;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -401,7 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LibreTranslate/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LiTranslate/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Q4KRU37RTG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -417,8 +417,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = viktorkalyniuk.LibreTranslate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = viktorkalyniuk.LiTranslate;
+				PRODUCT_NAME = LiTranslate;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -428,7 +428,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E4E5CC028A69D76005B5195 /* Build configuration list for PBXProject "LibreTranslate" */ = {
+		4E4E5CC028A69D76005B5195 /* Build configuration list for PBXProject "LiTranslate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E4E5CD128A69D77005B5195 /* Debug */,
@@ -437,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E4E5CD328A69D77005B5195 /* Build configuration list for PBXNativeTarget "LibreTranslate" */ = {
+		4E4E5CD328A69D77005B5195 /* Build configuration list for PBXNativeTarget "LiTranslate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E4E5CD428A69D77005B5195 /* Debug */,

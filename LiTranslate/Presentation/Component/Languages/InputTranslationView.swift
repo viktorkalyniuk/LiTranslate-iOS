@@ -1,6 +1,6 @@
 //
 //  InputTranslationView.swift
-//  LibreTranslate
+//  LiTranslate
 //
 //  Created by Viktor Kalyniuk on 13.08.2022.
 //

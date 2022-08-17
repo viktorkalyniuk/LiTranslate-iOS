@@ -1,6 +1,6 @@
 //
 //  TextData.swift
-//  LibreTranslate
+//  LiTranslate
 //
 //  Created by vktr on 16.08.2022.
 //

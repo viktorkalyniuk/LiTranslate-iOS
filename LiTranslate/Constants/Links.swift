@@ -1,6 +1,6 @@
 //
 //  Links.swift
-//  LibreTranslate
+//  LiTranslate
 //
 //  Created by Viktor Kalyniuk on 16.08.2022.
 //

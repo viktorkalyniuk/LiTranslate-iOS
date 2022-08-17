@@ -1,2 +1,1 @@
-LibreTranslate-iOS
-# LibreTranslate-iOS
+# LiTranslate
