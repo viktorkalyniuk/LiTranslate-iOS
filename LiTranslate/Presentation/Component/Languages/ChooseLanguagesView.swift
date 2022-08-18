@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct ChooseLanguagesView: View {
-    @ObservedObject var selection: LanguagesSelection
-    @ObservedObject var textData: TextData
+    @ObservedObject var language: LanguagesSelection
+    @ObservedObject var text: TextData
 
     var body: some View {
         HStack {
-            Picker(selection: $selection.input, label: Text("Language")) {
+            Picker(selection: $language.input, label: Text("Language")) {
                 ForEach(Languages.allCases, id: \.self) { language in
                     Text(language.rawValue).tag(language)
                 }
             }
             Spacer()
             Button {
-                (selection.input, selection.output) = (selection.output, selection.input)
+                (language.input, language.output) = (language.output, language.input)
                 TranslationParsing
-                    .parse(text: textData.input,
-                           inputLanguage: selection.input,
-                           outputLanguage: selection.output) { data in
+                    .parse(text: text.input,
+                           inputLanguage: language.input,
+                           outputLanguage: language.output) { data in
                         DispatchQueue.main.async {
-                            textData.output = data.translatedText
+                            text.output = data.translatedText
                         }
                     }
             } label: {
@@ -34,18 +34,18 @@ struct ChooseLanguagesView: View {
                     .rotationEffect(.degrees(-Double(Numbers.ninety)))
             }
             Spacer()
-            Picker(selection: $selection.output, label: Text("Language")) {
+            Picker(selection: $language.output, label: Text("Language")) {
                 ForEach(Languages.allCases, id: \.self) { language in
                     Text(language.rawValue).tag(language)
                 }
             }
-            .onChange(of: selection.output) { newValue in
+            .onChange(of: language.output) { newValue in
                 TranslationParsing
-                    .parse(text: textData.input,
-                           inputLanguage: selection.input,
-                           outputLanguage: selection.output) { data in
+                    .parse(text: text.input,
+                           inputLanguage: language.input,
+                           outputLanguage: language.output) { data in
                         DispatchQueue.main.async {
-                            textData.output = data.translatedText
+                            text.output = data.translatedText
                         }
                     }
             }
@@ -56,6 +56,6 @@ struct ChooseLanguagesView: View {
 
 struct ChooseLanguagesView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseLanguagesView(selection: LanguagesSelection(), textData: TextData())
+        ChooseLanguagesView(language: LanguagesSelection(), text: TextData())
     }
 }

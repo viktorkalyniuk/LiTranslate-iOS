@@ -22,15 +22,7 @@ struct OutputTranslationView: View {
                 }
                 .padding([.top, .trailing])
             }
-            HStack() {
-                Button {
-                    SpeechSynthesis.play(textData.output, language: selection.output)
-                } label: {
-                    Image(systemName: SystemNames.speakerWave2)
-                        .padding()
-                }
-                .disabled(!SpeechSynthesis.canSynthesis(language: selection.output))
-            }
+            OutputBottomButtons(language: selection, text: textData)
         }
         .padding()
     }

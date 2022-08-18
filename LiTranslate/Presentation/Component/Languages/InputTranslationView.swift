@@ -13,7 +13,7 @@ struct InputTranslationView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            ChooseLanguagesView(selection: selection, textData: textData)
+            ChooseLanguagesView(language: selection, text: textData)
             HStack(alignment: .top) {
                 TextEditor(text: $textData.input)
                     .onChange(of: textData.input) { _ in
@@ -34,15 +34,7 @@ struct InputTranslationView: View {
                 .opacity(Double(textData.input.isEmpty ? Numbers.zero : Numbers.one))
                 .padding([.top, .trailing])
             }
-            HStack() {
-                Button {
-                    SpeechSynthesis.play(textData.input, language: selection.input)
-                } label: {
-                    Image(systemName: SystemNames.speakerWave2)
-                            .padding()
-                }
-                .disabled(!SpeechSynthesis.canSynthesis(language: selection.input))
-            }
+            InputBottomButtons(language: selection, text: textData)
         }
         .padding()
     }

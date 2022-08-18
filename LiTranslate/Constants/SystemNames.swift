@@ -8,9 +8,10 @@
 import Foundation
 
 struct SystemNames {
-    static var shuffle: String = "shuffle"
-    static var swap: String = "arrow.triangle.swap"
-    static var closeCircleFill: String = "xmark.circle.fill"
-    static var star: String = "star"
-    static var speakerWave2 = "speaker.wave.2"
+    static let shuffle: String = "shuffle"
+    static let swap: String = "arrow.triangle.swap"
+    static let closeCircleFill: String = "xmark.circle.fill"
+    static let star: String = "star"
+    static let speakerWave2 = "speaker.wave.2"
+    static let cameraFill = "camera.fill"
 }
