@@ -28,6 +28,7 @@ struct InputTranslationView: View {
                     }
                 Button {
                     textData.input = ""
+                    textData.output = ""
                 } label: {
                     Image(systemName: SystemNames.closeCircleFill)
                 }

@@ -18,8 +18,10 @@ struct OutputTranslationView: View {
                 Button {
                     //TODO: Write logic for saving translation.
                 } label: {
-                    Image(systemName: SystemNames.star)
+                    Image(systemName: SystemNames.bookmark)
                 }
+                .opacity(Double(textData.output.isEmpty ? Numbers.zero : Numbers.one))
+                .disabled(textData.output.isEmpty)
                 .padding([.top, .trailing])
             }
             OutputBottomButtons(language: selection, text: textData)

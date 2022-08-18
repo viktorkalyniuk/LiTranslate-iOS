@@ -22,6 +22,15 @@ struct InputBottomButtons: View {
             .disabled(!SpeechSynthesis.canSynthesis(language: language.input))
 
             Spacer()
+            Button {
+                if let string = UIPasteboard.general.string {
+                    text.input = string
+                }
+            } label: {
+                Image(systemName: SystemNames.onClipboard)
+            }
+            .padding()
+
             ScanButton(text: $text.input)
                 .fixedSize(horizontal: true, vertical: true)
                 .padding(.trailing)

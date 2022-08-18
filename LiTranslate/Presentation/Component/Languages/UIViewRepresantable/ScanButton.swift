@@ -16,7 +16,7 @@ struct ScanButton: UIViewRepresentable {
           identifier: nil)
 
         let button = UIButton()
-        button.setImage(UIImage(systemName: SystemNames.cameraFill), for: .normal)
+        button.setImage(UIImage(systemName: SystemNames.cameraScan), for: .normal)
         button.menu = UIMenu(children: [textFromCamera])
 
         return button

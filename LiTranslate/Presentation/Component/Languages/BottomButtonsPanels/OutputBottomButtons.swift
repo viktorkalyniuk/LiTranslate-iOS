@@ -10,6 +10,8 @@ import SwiftUI
 struct OutputBottomButtons: View {
     @ObservedObject var language: LanguagesSelection
     @ObservedObject var text: TextData
+
+    @State private var isSharePresented: Bool = false
     
     var body: some View {
         HStack() {
@@ -20,6 +22,23 @@ struct OutputBottomButtons: View {
                     .padding()
             }
             .disabled(!SpeechSynthesis.canSynthesis(language: language.output))
+            Spacer()
+            Button {
+                UIPasteboard.general.string = text.output
+            } label: {
+                Image(systemName: SystemNames.docOnDoc)
+            }
+            .padding()
+            Button {
+                isSharePresented = true
+            } label: {
+                Image(systemName: SystemNames.share)
+            }
+            .sheet(isPresented: $isSharePresented) {
+                ActivityViewController(activityItems: [text.output])
+            }
+            .disabled(text.output.isEmpty)
+            .padding(.trailing)
         }
     }
 }
