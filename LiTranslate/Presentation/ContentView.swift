@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var selection: LanguagesSelection = LanguagesSelection()
+    @StateObject private var textData: TextData = TextData()
+    @StateObject private var bookmarksData: BookmarksData = BookmarksData()
+    
     var body: some View {
         TabView {
             HomeView()
+                .environmentObject(selection)
+                .environmentObject(textData)
+                .environmentObject(bookmarksData)
                 .tabItem {
                     Image(systemName: SystemNames.globe)
-                    Text("Translate")
+                    Text(Names.translateTabItemName)
+                }
+            BookmarksView()
+                .environmentObject(bookmarksData)
+                .tabItem {
+                    Image(systemName: SystemNames.bookmarkFill)
+                    Text(Names.bookmarksTabItemName)
                 }
         }
     }

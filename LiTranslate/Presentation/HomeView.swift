@@ -7,16 +7,11 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    @StateObject private var selection: LanguagesSelection = LanguagesSelection()
-    @StateObject private var textData: TextData = TextData()
-    
+struct HomeView: View {    
     var body: some View {
         VStack {
-            OutputTranslationView().environmentObject(selection)
-                .environmentObject(textData)
-            InputTranslationView().environmentObject(selection)
-                .environmentObject(textData)
+            OutputTranslationView()
+            InputTranslationView()
         }
         .padding()
     }

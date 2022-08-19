@@ -10,13 +10,26 @@ import SwiftUI
 struct OutputTranslationView: View {
     @EnvironmentObject var selection: LanguagesSelection
     @EnvironmentObject var textData: TextData
+    @EnvironmentObject var bookmarksData: BookmarksData
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 TextEditor(text: .constant(textData.output))
                 Button {
-                    //TODO: Write logic for saving translation.
+                    let bookmark = BookmarkModel(
+                        inputLanguage:
+                            selection.input.rawValue,
+                        outputLanguage:
+                            selection.output.rawValue,
+                        inputText:
+                            textData.input,
+                        outputText:
+                            textData.output
+                    )
+                    bookmarksData
+                        .array
+                        .insert(bookmark, at: 0)
                 } label: {
                     Image(systemName: SystemNames.bookmark)
                 }

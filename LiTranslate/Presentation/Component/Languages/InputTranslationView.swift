@@ -18,9 +18,13 @@ struct InputTranslationView: View {
                 TextEditor(text: $textData.input)
                     .onChange(of: textData.input) { _ in
                         TranslationParsing
-                            .parse(text: textData.input,
-                                   inputLanguage: selection.input,
-                                   outputLanguage: selection.output) { data in
+                            .parse(
+                                text:
+                                    textData.input,
+                                inputLanguage:
+                                    selection.input,
+                                outputLanguage: selection.output
+                            ) { data in
                                 DispatchQueue.main.async {
                                     textData.output = data.translatedText
                                 }
@@ -32,10 +36,13 @@ struct InputTranslationView: View {
                 } label: {
                     Image(systemName: SystemNames.closeCircleFill)
                 }
-                .opacity(Double(textData.input.isEmpty ? Numbers.zero : Numbers.one))
+                .opacity(
+                    Double(textData.input.isEmpty ?
+                           Numbers.zero : Numbers.one))
                 .padding([.top, .trailing])
             }
-            InputBottomButtons(language: selection, text: textData)
+            InputBottomButtons(language: selection,
+                               text: textData)
         }
         .padding()
     }
