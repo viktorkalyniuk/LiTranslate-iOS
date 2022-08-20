@@ -50,6 +50,7 @@ struct ChooseLanguagesView: View {
                     }
             }
         }
+        .foregroundColor(Color(uiColor: .systemGray6))
         .padding(.horizontal)
     }
 }

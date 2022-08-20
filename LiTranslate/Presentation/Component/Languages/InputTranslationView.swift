@@ -11,9 +11,15 @@ struct InputTranslationView: View {
     @EnvironmentObject private var selection: LanguagesSelection
     @EnvironmentObject private var textData: TextData
 
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+
     var body: some View {
         VStack(alignment: .leading) {
             ChooseLanguagesView(language: selection, text: textData)
+                .padding()
+                .background(Color(uiColor: .systemBlue).ignoresSafeArea())
             HStack(alignment: .top) {
                 TextEditor(text: $textData.input)
                     .onChange(of: textData.input) { _ in
@@ -44,7 +50,9 @@ struct InputTranslationView: View {
             InputBottomButtons(language: selection,
                                text: textData)
         }
-        .padding()
+//        .padding()
+        .background(Color(uiColor: .systemGray6))
+        .cornerRadius(CGFloat(Numbers.twentyFive))
     }
 }
 

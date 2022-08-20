@@ -11,6 +11,10 @@ struct OutputTranslationView: View {
     @EnvironmentObject var selection: LanguagesSelection
     @EnvironmentObject var textData: TextData
     @EnvironmentObject var bookmarksData: BookmarksData
+
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -40,6 +44,8 @@ struct OutputTranslationView: View {
             OutputBottomButtons(language: selection, text: textData)
         }
         .padding()
+        .background(Color(uiColor: .systemGray6))
+        .cornerRadius(CGFloat(Numbers.twentyFive))
     }
 }
 

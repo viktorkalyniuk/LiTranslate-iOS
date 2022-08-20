@@ -7,18 +7,24 @@
 
 import SwiftUI
 
-struct HomeView: View {    
+struct HomeView: View {
     var body: some View {
         VStack {
             OutputTranslationView()
             InputTranslationView()
+                .padding(.top)
+                .padding(.top)
         }
         .padding()
+        .background(Color(uiColor: .systemGray5))
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(TextData())
+            .environmentObject(LanguagesSelection())
+            .environmentObject(BookmarksData())
     }
 }
