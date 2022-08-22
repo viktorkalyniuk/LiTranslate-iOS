@@ -8,8 +8,8 @@
 import Foundation
 
 struct TranslationParsing {
-    static func parse(text: String, inputLanguage: Languages, outputLanguage: Languages, handler: @escaping(TranslationDecode) -> Void) {
-        if let url = URL(string: Links.JSON.libreTranslateURL) {
+    static func parse(url: String, text: String, inputLanguage: Languages, outputLanguage: Languages, handler: @escaping(TranslationDecode) -> Void) {
+        if let url = URL(string: url) {
             let session = URLSession.shared
             let parameters: [String: String] = [
                 "q": "\(text)",

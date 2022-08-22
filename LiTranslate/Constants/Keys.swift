@@ -8,5 +8,7 @@
 import Foundation
 
 struct Keys {
-    static let bookmarks = "bookmarks"
+    static let bookmarks: String = "bookmarks"
+    static let libreTranslateSelfHostURL: String = "libreTranslateSelfHostURL"
+    static let libreTranslateDefaultURL: String = "libreTranslateURL"
 }

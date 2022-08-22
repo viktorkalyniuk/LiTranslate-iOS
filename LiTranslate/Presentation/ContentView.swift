@@ -11,6 +11,7 @@ struct ContentView: View {
     @StateObject private var selection: LanguagesSelection = LanguagesSelection()
     @StateObject private var textData: TextData = TextData()
     @StateObject private var bookmarksData: BookmarksData = BookmarksData()
+    @StateObject private var instance: InstanceURL = InstanceURL()
     
     var body: some View {
         TabView {
@@ -18,6 +19,7 @@ struct ContentView: View {
                 .environmentObject(selection)
                 .environmentObject(textData)
                 .environmentObject(bookmarksData)
+                .environmentObject(instance)
                 .tabItem {
                     Image(systemName: SystemNames.globe)
                     Text(Names.translateTabItemName)
@@ -27,6 +29,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: SystemNames.bookmarkFill)
                     Text(Names.bookmarksTabItemName)
+                }
+            SettingsView()
+                .environmentObject(instance)
+                .tabItem {
+                    Image(systemName: SystemNames.settings)
+                    Text(Names.settingsTabItemName)
                 }
         }
     }

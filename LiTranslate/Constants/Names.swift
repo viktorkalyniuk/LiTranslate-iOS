@@ -8,6 +8,7 @@
 import Foundation
 
 struct Names {
-    static let translateTabItemName = "Translate"
-    static let bookmarksTabItemName = "Bookmarks"
+    static let translateTabItemName: String = "Translate"
+    static let bookmarksTabItemName: String = "Bookmarks"
+    static let settingsTabItemName: String = "Settings"
 }

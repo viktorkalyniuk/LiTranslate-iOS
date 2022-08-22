@@ -11,6 +11,8 @@ struct ChooseLanguagesView: View {
     @ObservedObject var language: LanguagesSelection
     @ObservedObject var text: TextData
 
+    @EnvironmentObject private var instance: InstanceURL
+    
     var body: some View {
         HStack {
             Picker(selection: $language.input, label: Text("Language")) {
@@ -22,7 +24,8 @@ struct ChooseLanguagesView: View {
             Button {
                 (language.input, language.output) = (language.output, language.input)
                 TranslationParsing
-                    .parse(text: text.input,
+                    .parse(url: instance.getURL(),
+                           text: text.input,
                            inputLanguage: language.input,
                            outputLanguage: language.output) { data in
                         DispatchQueue.main.async {
@@ -41,7 +44,8 @@ struct ChooseLanguagesView: View {
             }
             .onChange(of: language.output) { newValue in
                 TranslationParsing
-                    .parse(text: text.input,
+                    .parse(url: instance.getURL(),
+                           text: text.input,
                            inputLanguage: language.input,
                            outputLanguage: language.output) { data in
                         DispatchQueue.main.async {

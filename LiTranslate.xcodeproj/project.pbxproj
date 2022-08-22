@@ -34,6 +34,10 @@
 		4E8E26CA28ABB4DB0075598D /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26C928ABB4DB0075598D /* Links.swift */; };
 		4E8E26CC28ABD9FA0075598D /* TextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26CB28ABD9FA0075598D /* TextData.swift */; };
 		4EB16E8E28AD189200B0F205 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB16E8D28AD189200B0F205 /* ScanButton.swift */; };
+		4EDDD1DC28B372E600A634EE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DB28B372E500A634EE /* SettingsView.swift */; };
+		4EDDD1DE28B39FA200A634EE /* DefaultInstancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */; };
+		4EDDD1E028B3BBDC00A634EE /* SelfHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DF28B3BBDC00A634EE /* SelfHostingView.swift */; };
+		4EDDD1E428B3E97D00A634EE /* InstanceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1E328B3E97D00A634EE /* InstanceURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,10 @@
 		4E8E26C928ABB4DB0075598D /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		4E8E26CB28ABD9FA0075598D /* TextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextData.swift; sourceTree = "<group>"; };
 		4EB16E8D28AD189200B0F205 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
+		4EDDD1DB28B372E500A634EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInstancePicker.swift; sourceTree = "<group>"; };
+		4EDDD1DF28B3BBDC00A634EE /* SelfHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfHostingView.swift; sourceTree = "<group>"; };
+		4EDDD1E328B3E97D00A634EE /* InstanceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 				4E2D0BF428AEACE000006797 /* ContentView.swift */,
 				4E4E5CCA28A69D76005B5195 /* HomeView.swift */,
 				4E2D0BFF28AEDDA200006797 /* BookmarksView.swift */,
+				4EDDD1DB28B372E500A634EE /* SettingsView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8E26C128AA7D4A0075598D /* Languages */,
+				4EDDD1E528B4017000A634EE /* Settings */,
 				4E2D0BF728AEB60F00006797 /* BookmarkView.swift */,
 			);
 			path = Component;
@@ -212,8 +222,18 @@
 				4E8E26CB28ABD9FA0075598D /* TextData.swift */,
 				4E8E26C228AA7E300075598D /* LanguagesSelection.swift */,
 				4E2D0BFD28AEBDF600006797 /* BookmarksData.swift */,
+				4EDDD1E328B3E97D00A634EE /* InstanceURL.swift */,
 			);
 			path = ObservableObjects;
+			sourceTree = "<group>";
+		};
+		4EDDD1E528B4017000A634EE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */,
+				4EDDD1DF28B3BBDC00A634EE /* SelfHostingView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +312,15 @@
 				4E8E26C528AABADD0075598D /* TranslationDecode.swift in Sources */,
 				4E4E5CCB28A69D76005B5195 /* HomeView.swift in Sources */,
 				4E2D0C0228AFAD4B00006797 /* Names.swift in Sources */,
+				4EDDD1DE28B39FA200A634EE /* DefaultInstancePicker.swift in Sources */,
 				4E8E26CA28ABB4DB0075598D /* Links.swift in Sources */,
 				4E2D0BF828AEB60F00006797 /* BookmarkView.swift in Sources */,
 				4E8E26CC28ABD9FA0075598D /* TextData.swift in Sources */,
 				4E2D0BFA28AEB9E600006797 /* BookmarkModel.swift in Sources */,
+				4EDDD1E428B3E97D00A634EE /* InstanceURL.swift in Sources */,
 				4E2D0BEE28AE8B9200006797 /* InputBottomButtons.swift in Sources */,
 				4E2D0C0028AEDDA200006797 /* BookmarksView.swift in Sources */,
+				4EDDD1E028B3BBDC00A634EE /* SelfHostingView.swift in Sources */,
 				4E2D0BF528AEACE000006797 /* ContentView.swift in Sources */,
 				4E2D0BF028AE8ED100006797 /* OutputBottomButtons.swift in Sources */,
 				4E8E26B928A7A2FB0075598D /* Numbers.swift in Sources */,
@@ -311,6 +334,7 @@
 				4E8E26C728AABAEB0075598D /* TranslationParsing.swift in Sources */,
 				4E2D0BFE28AEBDF600006797 /* BookmarksData.swift in Sources */,
 				4E8E26BD28A7BA770075598D /* InputTranslationView.swift in Sources */,
+				4EDDD1DC28B372E600A634EE /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

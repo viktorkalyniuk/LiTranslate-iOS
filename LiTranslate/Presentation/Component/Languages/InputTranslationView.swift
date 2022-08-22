@@ -10,6 +10,7 @@ import SwiftUI
 struct InputTranslationView: View {
     @EnvironmentObject private var selection: LanguagesSelection
     @EnvironmentObject private var textData: TextData
+    @EnvironmentObject private var instance: InstanceURL
 
     init() {
         UITextView.appearance().backgroundColor = .clear
@@ -25,6 +26,8 @@ struct InputTranslationView: View {
                     .onChange(of: textData.input) { _ in
                         TranslationParsing
                             .parse(
+                                url:
+                                    instance.getURL(),
                                 text:
                                     textData.input,
                                 inputLanguage:
