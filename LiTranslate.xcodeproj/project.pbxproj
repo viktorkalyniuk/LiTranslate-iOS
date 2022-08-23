@@ -164,6 +164,7 @@
 		4E8E26AA28A6AE780075598D /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				4E2D0BF128AEA27D00006797 /* UIViewRepresantable */,
 				4E8E26C128AA7D4A0075598D /* Languages */,
 				4EDDD1E528B4017000A634EE /* Settings */,
 				4E2D0BF728AEB60F00006797 /* BookmarkView.swift */,
@@ -198,7 +199,6 @@
 		4E8E26C128AA7D4A0075598D /* Languages */ = {
 			isa = PBXGroup;
 			children = (
-				4E2D0BF128AEA27D00006797 /* UIViewRepresantable */,
 				4E2D0BEC28AE8B1100006797 /* BottomButtonsPanels */,
 				4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */,
 				4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */,

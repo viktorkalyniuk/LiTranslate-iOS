@@ -38,4 +38,69 @@ enum Languages: String, CaseIterable, Identifiable {
     case es = "es"
     case sv = "sv"
     case tr = "tr"
+
+    func getCountryName() -> String {
+        var countryName = "unknown"
+
+        switch self {
+        case .en:
+            countryName = "English"
+        case .uk:
+            countryName = "Ukrainian"
+        case .ar:
+            countryName = "Arabic"
+        case .az:
+            countryName = "Azerbaijani"
+        case .zh:
+            countryName = "Chinese"
+        case .cs:
+            countryName = "Czech"
+        case .da:
+            countryName = "Danish"
+        case .nl:
+            countryName = "Dutch"
+        case .eo:
+            countryName = "Esperanto"
+        case .fi:
+            countryName = "Finnish"
+        case .fr:
+            countryName = "French"
+        case .de:
+            countryName = "German"
+        case .el:
+            countryName = "Greek"
+        case .he:
+            countryName = "Hebrew"
+        case .hi:
+            countryName = "Hindi"
+        case .hu:
+            countryName = "Hungarian"
+        case .id:
+            countryName = "Indonesian"
+        case .ga:
+            countryName = "Irish"
+        case .it:
+            countryName = "Italian"
+        case .ja:
+            countryName = "Japanese"
+        case .ko:
+            countryName = "Korean"
+        case .fa:
+            countryName = "Persian"
+        case .pl:
+            countryName = "Polish"
+        case .pt:
+            countryName = "Portuguese"
+        case .sk:
+            countryName = "Slovak"
+        case .es:
+            countryName = "Spanish"
+        case .sv:
+            countryName = "Swedish"
+        case .tr:
+            countryName = "Turkish"
+        }
+
+        return countryName
+    }
 }

@@ -17,7 +17,7 @@ struct ChooseLanguagesView: View {
         HStack {
             Picker(selection: $language.input, label: Text("Language")) {
                 ForEach(Languages.allCases, id: \.self) { language in
-                    Text(language.rawValue).tag(language)
+                    Text(language.getCountryName()).tag(language)
                 }
             }
             Spacer()
@@ -39,7 +39,7 @@ struct ChooseLanguagesView: View {
             Spacer()
             Picker(selection: $language.output, label: Text("Language")) {
                 ForEach(Languages.allCases, id: \.self) { language in
-                    Text(language.rawValue).tag(language)
+                    Text(language.getCountryName()).tag(language)
                 }
             }
             .onChange(of: language.output) { newValue in
