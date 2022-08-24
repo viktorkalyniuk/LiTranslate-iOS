@@ -23,7 +23,7 @@ struct BookmarkView: View {
             }
 //                .padding()
             Text("\(inputText)")
-//                .padding()
+                .padding(.top)
             Divider()
             Text("\(outputText)")
 //                .padding()

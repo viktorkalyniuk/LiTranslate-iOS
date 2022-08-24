@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct FlagImageView: View {
+    @Binding var language: Languages
+
+    var color: Color
+
     var frameHeight: CGFloat = CGFloat(Numbers.thirty)
     var lineWidth: CGFloat = CGFloat(Numbers.three)
     var radius: CGFloat = CGFloat(Numbers.two)
     var x: CGFloat = CGFloat(Numbers.zero)
     var y: CGFloat = CGFloat(Numbers.zero)
-
-    @Binding var language: Languages
-
-    var color: Color
 
     var body: some View {
         Image(language.rawValue)

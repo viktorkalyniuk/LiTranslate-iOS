@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var instance: InstanceURL
+    
+    @State private var isShowingAlert: Bool = false
+
     private let saveUkraineTitle: String = "Save Ukraine 🇺🇦"
     private let hostingTitle: String = "Hosting"
     private let selfHostingTitle: String = "Self Hosting"
@@ -18,10 +22,6 @@ struct SettingsView: View {
     private let licenceTitle: String = "License"
     private let supportTitle: String = "Support"
     private let rateUsTitle: String = "Rate in the App Store"
-    
-    @State private var isShowingAlert: Bool = false
-
-    @EnvironmentObject var instance: InstanceURL
 
     var body: some View {
         NavigationView {
@@ -82,6 +82,7 @@ struct SettingsView: View {
                 }
                 .textCase(nil)
             }
+            .buttonStyle(.plain)
         }
     }
 }

@@ -14,6 +14,8 @@ struct InputBottomButtons: View {
 
     @Binding var isKeyboardVisible: Bool
 
+    var translateButtonFontSize: CGFloat = CGFloat(Numbers.fourteen)
+
     var body: some View {
         HStack() {
             Button {
@@ -52,8 +54,12 @@ struct InputBottomButtons: View {
                 UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
             } label: {
                 Text("Translate")
+                    .font(.system(size: translateButtonFontSize))
             }
+            .buttonStyle(.borderedProminent)
+            .tint(Color(uiColor: .systemBlue))
             .disabled(textData.input.isEmpty)
+            .opacity(textData.input.isEmpty ? Double(Numbers.zero) : Double(Numbers.one))
             Spacer()
             Button {
                 if let string = UIPasteboard.general.string {

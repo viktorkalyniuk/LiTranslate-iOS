@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct LanguagesListView: View {
-    var textMethod: TextMethod
-
     @ObservedObject var languages: LanguagesSelection
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
+    var textMethod: TextMethod
 
     var body: some View {
         List(Languages.allCases, id: \.self) { language in
@@ -36,6 +36,6 @@ struct LanguagesListView: View {
 
 struct LanguagesListView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguagesListView(textMethod: .input, languages: LanguagesSelection())
+        LanguagesListView(languages: LanguagesSelection(), textMethod: .input)
     }
 }
