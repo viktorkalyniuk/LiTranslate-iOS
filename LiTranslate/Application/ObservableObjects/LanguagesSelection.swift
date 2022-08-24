@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import AVFoundation
+import SwiftUI
 
 class LanguagesSelection: ObservableObject {
-    @Published var input: Languages = .uk
-    @Published var output: Languages = .en
+    @AppStorage(Keys.languageInputSelection) var input: Languages = .uk
+    @AppStorage(Keys.languageOutputSelection) var output: Languages = .en
 }
