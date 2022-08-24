@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct BookmarkView: View {
-    @State var inputLanguage: String
-    @State var outputLanguage: String
+    @State var inputLanguage: Languages
+    @State var outputLanguage: Languages
 
     @State var inputText: String
     @State var outputText: String
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(inputLanguage) > \(outputLanguage)")
-                .padding()
+            HStack {
+                FlagImageView(language: .constant(inputLanguage), color: Color(uiColor: .secondarySystemBackground))
+                Image(systemName: SystemNames.arrowRight)
+                FlagImageView(language: .constant(outputLanguage), color: Color(uiColor: .secondarySystemBackground))
+            }
+//                .padding()
             Text("\(inputText)")
-                .padding()
+//                .padding()
             Divider()
             Text("\(outputText)")
-                .padding()
+//                .padding()
         }
         .padding()
     }
@@ -30,6 +34,6 @@ struct BookmarkView: View {
 
 struct BookmarkView_Previews: PreviewProvider {
     static var previews: some View {
-        BookmarkView(inputLanguage: "en", outputLanguage: "fr", inputText: "Hello", outputText: "Bonjour")
+        BookmarkView(inputLanguage: Languages.uk, outputLanguage: Languages.fr, inputText: "Hello", outputText: "Bonjour")
     }
 }

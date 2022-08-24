@@ -23,4 +23,5 @@ struct SystemNames {
     static let settings: String = "gearshape.fill"
     static let openLink: String = "arrow.up.forward.app"
     static let keyboardChevronDown: String = "keyboard.chevron.compact.down"
+    static let arrowRight: String = "arrow.right"
 }

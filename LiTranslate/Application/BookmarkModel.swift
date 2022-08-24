@@ -8,8 +8,8 @@
 import Foundation
 
 struct BookmarkModel: Codable, Hashable {    
-    var inputLanguage: String
-    var outputLanguage: String
+    var inputLanguage: Languages
+    var outputLanguage: Languages
 
     var inputText: String
     var outputText: String

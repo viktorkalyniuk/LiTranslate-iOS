@@ -24,9 +24,9 @@ struct OutputTranslationView: View {
                 Button {
                     let bookmark = BookmarkModel(
                         inputLanguage:
-                            selection.input.rawValue,
+                            selection.input,
                         outputLanguage:
-                            selection.output.rawValue,
+                            selection.output,
                         inputText:
                             textData.input,
                         outputText:

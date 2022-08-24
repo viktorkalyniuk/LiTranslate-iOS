@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Languages: String, CaseIterable, Identifiable {
+enum Languages: String, CaseIterable, Identifiable, Codable {
     var id: String { self.rawValue }
 
     case en = "en"
