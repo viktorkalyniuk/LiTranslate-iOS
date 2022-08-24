@@ -36,6 +36,7 @@
 		4E99599F28B528C000510672 /* LanguagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99599E28B528C000510672 /* LanguagesListView.swift */; };
 		4E9959A128B53F5000510672 /* TextMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9959A028B53F5000510672 /* TextMethod.swift */; };
 		4E9959A328B54D4200510672 /* FlagImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9959A228B54D4200510672 /* FlagImageView.swift */; };
+		4E9959A928B6768100510672 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9959A828B6768100510672 /* KeyboardReadable.swift */; };
 		4EB16E8E28AD189200B0F205 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB16E8D28AD189200B0F205 /* ScanButton.swift */; };
 		4EDDD1DC28B372E600A634EE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DB28B372E500A634EE /* SettingsView.swift */; };
 		4EDDD1DE28B39FA200A634EE /* DefaultInstancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */; };
@@ -74,6 +75,7 @@
 		4E99599E28B528C000510672 /* LanguagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesListView.swift; sourceTree = "<group>"; };
 		4E9959A028B53F5000510672 /* TextMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMethod.swift; sourceTree = "<group>"; };
 		4E9959A228B54D4200510672 /* FlagImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImageView.swift; sourceTree = "<group>"; };
+		4E9959A828B6768100510672 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		4EB16E8D28AD189200B0F205 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		4EDDD1DB28B372E500A634EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInstancePicker.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		4E8E26BE28A81B7E0075598D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				4E9959A728B6766600510672 /* Protocols */,
 				4EB16E8C28AD184300B0F205 /* ObservableObjects */,
 				4E8E26C828AABAEE0075598D /* LibreTranslateAPI */,
 				4E8E26BF28A81B9F0075598D /* SpeechSynthesis.swift */,
@@ -223,6 +226,14 @@
 				4E8E26C628AABAEB0075598D /* TranslationParsing.swift */,
 			);
 			path = LibreTranslateAPI;
+			sourceTree = "<group>";
+		};
+		4E9959A728B6766600510672 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4E9959A828B6768100510672 /* KeyboardReadable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4EB16E8C28AD184300B0F205 /* ObservableObjects */ = {
@@ -332,6 +343,7 @@
 				4E2D0C0028AEDDA200006797 /* BookmarksView.swift in Sources */,
 				4EDDD1E028B3BBDC00A634EE /* SelfHostingView.swift in Sources */,
 				4E2D0BF528AEACE000006797 /* ContentView.swift in Sources */,
+				4E9959A928B6768100510672 /* KeyboardReadable.swift in Sources */,
 				4E2D0BF028AE8ED100006797 /* OutputBottomButtons.swift in Sources */,
 				4E8E26B928A7A2FB0075598D /* Numbers.swift in Sources */,
 				4E2D0BFC28AEBB6400006797 /* Keys.swift in Sources */,

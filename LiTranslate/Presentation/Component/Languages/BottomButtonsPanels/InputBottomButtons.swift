@@ -12,6 +12,8 @@ struct InputBottomButtons: View {
     @EnvironmentObject private var textData: TextData
     @EnvironmentObject private var instance: InstanceURL
 
+    @Binding var isKeyboardVisible: Bool
+
     var body: some View {
         HStack() {
             Button {
@@ -27,9 +29,9 @@ struct InputBottomButtons: View {
             } label: {
                 Image(systemName: SystemNames.keyboardChevronDown)
             }
-            .disabled(textData.input.isEmpty)
+            .disabled(!isKeyboardVisible)
             .opacity(
-                Double(textData.input.isEmpty ?
+                Double(!isKeyboardVisible ?
                        Numbers.zero : Numbers.one))
             Spacer()
             Button {
@@ -72,7 +74,7 @@ struct InputBottomButtons: View {
 
 struct InputBottomButtons_Previews: PreviewProvider {
     static var previews: some View {
-        InputBottomButtons()
+        InputBottomButtons(isKeyboardVisible: .constant(true))
             .environmentObject(TextData())
             .environmentObject(LanguagesSelection())
     }

@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct InputTranslationView: View {
+struct InputTranslationView: View, KeyboardReadable {
     @EnvironmentObject private var selection: LanguagesSelection
     @EnvironmentObject private var textData: TextData
+
+    @State private var isKeyboardVisible: Bool = false
 
     init() {
         UITextView.appearance().backgroundColor = .clear
@@ -23,6 +25,9 @@ struct InputTranslationView: View {
             HStack(alignment: .top) {
                 TextEditor(text: $textData.input)
                     .padding([.leading, .trailing, .bottom])
+                    .onReceive(keyboardPublisher) { isVisible in
+                        isKeyboardVisible = isVisible
+                    }
                 Button {
                     textData.input = ""
                     textData.output = ""
@@ -34,7 +39,7 @@ struct InputTranslationView: View {
                            Numbers.zero : Numbers.one))
                 .padding([.top, .trailing])
             }
-            InputBottomButtons()
+            InputBottomButtons(isKeyboardVisible: $isKeyboardVisible)
         }
 //        .padding()
         .background(Color(uiColor: .systemGray6))
