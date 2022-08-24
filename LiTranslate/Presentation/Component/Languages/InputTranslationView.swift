@@ -13,10 +13,6 @@ struct InputTranslationView: View, KeyboardReadable {
 
     @State private var isKeyboardVisible: Bool = false
 
-    init() {
-        UITextView.appearance().backgroundColor = .clear
-    }
-
     var body: some View {
         VStack(alignment: .leading) {
             ChooseLanguagesView()

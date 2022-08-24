@@ -17,7 +17,7 @@ struct BookmarkView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                FlagImageView(language: .constant(inputLanguage), color: Color(uiColor: .secondarySystemBackground))
+                FlagImageView(language: .constant(inputLanguage), color: Color(uiColor: .systemGray6))
                 Image(systemName: SystemNames.arrowRight)
                 FlagImageView(language: .constant(outputLanguage), color: Color(uiColor: .secondarySystemBackground))
             }

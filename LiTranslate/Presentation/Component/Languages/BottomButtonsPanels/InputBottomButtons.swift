@@ -14,7 +14,7 @@ struct InputBottomButtons: View {
 
     @Binding var isKeyboardVisible: Bool
 
-    var translateButtonFontSize: CGFloat = CGFloat(Numbers.fourteen)
+    private let translateButtonFontSize: CGFloat = CGFloat(Numbers.fourteen)
 
     var body: some View {
         HStack() {
@@ -69,10 +69,8 @@ struct InputBottomButtons: View {
                 Image(systemName: SystemNames.onClipboard)
             }
             .padding()
-
             ScanButton(text: $textData.input)
                 .fixedSize(horizontal: true, vertical: true)
-//                .padding(.trailing)
         }
         .padding(.trailing)
     }

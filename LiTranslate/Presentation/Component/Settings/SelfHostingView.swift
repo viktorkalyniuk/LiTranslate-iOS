@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct SelfHostingView: View {
+    @EnvironmentObject var instance: InstanceURL
+
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
+    @State private var input: String = ""
+
     private let selfHostingTitle = "Self Hosting"
     private let textFieldTitle = "url"
     private let useInstanceTitle = "Use default instance"
@@ -15,11 +21,9 @@ struct SelfHostingView: View {
     private let instructionTitle = "Instruction"
     private let doneTitle = "Done"
 
-    @State private var input: String = ""
-
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-
-    @EnvironmentObject var instance: InstanceURL
+    private let backgroundColor: Color = Color(uiColor: .systemGray5)
+    private let listRowBackgroundColor: Color = Color(uiColor: .systemGray6)
+    private let rowTint: Color = Color(uiColor: .label)
 
     var body: some View {
         List {
@@ -28,6 +32,8 @@ struct SelfHostingView: View {
                     .onAppear {
                         input = instance.selfHostURL
                     }
+                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(rowTint)
             }
             .textCase(nil)
             Button {
@@ -35,7 +41,9 @@ struct SelfHostingView: View {
                 self.mode.wrappedValue.dismiss()
             } label: {
                 Text(useInstanceTitle)
+                    .foregroundColor(rowTint)
             }
+            .listRowBackground(listRowBackgroundColor)
             Section(infoTitle) {
                 if let url = URL(string: Links.Info.libreTranslateHosting) {
                     Link(destination: url) {
@@ -44,11 +52,14 @@ struct SelfHostingView: View {
                             Spacer()
                             Image(systemName: SystemNames.openLink)
                         }
+                        .foregroundColor(rowTint)
                     }
+                    .listRowBackground(listRowBackgroundColor)
                 }
             }
             .textCase(nil)
         }
+        .background(backgroundColor)
         .toolbar {
             Button {
                 instance.selfHostURL = input
@@ -56,6 +67,9 @@ struct SelfHostingView: View {
             } label: {
                 Text(doneTitle)
             }
+        }
+        .onAppear {
+            UITableView.appearance().backgroundColor = .clear
         }
     }
 }

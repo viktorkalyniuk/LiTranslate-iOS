@@ -23,6 +23,10 @@ struct SettingsView: View {
     private let supportTitle: String = "Support"
     private let rateUsTitle: String = "Rate in the App Store"
 
+    private let backgroundColor: Color = Color(uiColor: .systemGray5)
+    private let listRowBackgroundColor: Color = Color(uiColor: .systemGray6)
+    private let rowTint: Color = Color(uiColor: .label)
+
     var body: some View {
         NavigationView {
             List() {
@@ -34,12 +38,18 @@ struct SettingsView: View {
                             Image(systemName: SystemNames.openLink)
                         }
                     }
+                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(rowTint)
                 }
                 Section {
                     NavigationLink(selfHostingTitle) {
                         SelfHostingView()
                     }
+                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(rowTint)
                     DefaultInstancePicker()
+                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(rowTint)
                 } header: {
                     Text(hostingTitle)
                 } footer: {
@@ -55,12 +65,16 @@ struct SettingsView: View {
                                 Image(systemName: SystemNames.openLink)
                             }
                         }
+                        .listRowBackground(listRowBackgroundColor)
+                        .tint(rowTint)
                     }
                     HStack {
                         Text(policyTitle)
                         Spacer()
                         Image(systemName: SystemNames.openLink)
                     }
+                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(rowTint)
                     if let licenseURL = URL(string: Links.Info.license) {
                         Link(destination: licenseURL) {
                             HStack {
@@ -69,6 +83,8 @@ struct SettingsView: View {
                                 Image(systemName: SystemNames.openLink)
                             }
                         }
+                        .listRowBackground(listRowBackgroundColor)
+                        .tint(rowTint)
                     }
                 }
                 .textCase(nil)
@@ -79,10 +95,17 @@ struct SettingsView: View {
                         Spacer()
                         Image(systemName: SystemNames.openLink)
                     }
+                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(rowTint)
                 }
                 .textCase(nil)
             }
-            .buttonStyle(.plain)
+            .background(backgroundColor)
+//            .buttonStyle(.plain)
+//            .foregroundColor(.red)
+        }
+        .onAppear {
+            UITableView.appearance().backgroundColor = .clear
         }
     }
 }

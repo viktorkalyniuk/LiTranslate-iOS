@@ -13,7 +13,7 @@ struct BookmarksView: View {
     @EnvironmentObject private var bookmarksData: BookmarksData
 
     @Binding var tabSelection: Int
-    
+
     var body: some View {
         List {
             ForEach(bookmarksData.array, id: \.self) { bookmark in
@@ -37,14 +37,18 @@ struct BookmarksView: View {
                     )
                 }
                 .buttonStyle(.plain)
-                .background(Color(uiColor: .systemBackground))
+                .background(Color(uiColor: .systemGray6))
                 .cornerRadius(CGFloat(Numbers.twentyFive))
             }
             .onDelete { IndexSet in
                 bookmarksData.array.remove(atOffsets: IndexSet)
             }
         }
+        .background(Color(uiColor: .systemGray5))
         .listStyle(SidebarListStyle())
+        .onAppear {
+            UITableView.appearance().backgroundColor = .clear
+        }
     }
 }
 
