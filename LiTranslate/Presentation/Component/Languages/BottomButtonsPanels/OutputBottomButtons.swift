@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct OutputBottomButtons: View {
-    @ObservedObject var language: LanguagesSelection
-    @ObservedObject var text: TextData
+    @EnvironmentObject private var selection: LanguagesSelection
+    @EnvironmentObject private var textData: TextData
 
     @State private var isSharePresented: Bool = false
     
     var body: some View {
         HStack() {
             Button {
-                SpeechSynthesis.play(text.output, language: language.output)
+                SpeechSynthesis.play(textData.output, language: selection.output)
             } label: {
                 Image(systemName: SystemNames.speakerWave2)
                     .padding()
             }
-            .disabled(!SpeechSynthesis.canSynthesis(language: language.output))
+            .disabled(!SpeechSynthesis.canSynthesis(language: selection.output))
             Spacer()
             Button {
-                UIPasteboard.general.string = text.output
+                UIPasteboard.general.string = textData.output
             } label: {
                 Image(systemName: SystemNames.docOnDoc)
             }
@@ -35,16 +35,19 @@ struct OutputBottomButtons: View {
                 Image(systemName: SystemNames.share)
             }
             .sheet(isPresented: $isSharePresented) {
-                ActivityViewController(activityItems: [text.output])
+                ActivityViewController(activityItems: [textData.output])
             }
-            .disabled(text.output.isEmpty)
-            .padding(.trailing)
+            .disabled(textData.output.isEmpty)
+//            .padding(.trailing)
         }
+        .padding(.trailing)
     }
 }
 
 struct OutputBottomButtons_Previews: PreviewProvider {
     static var previews: some View {
-        OutputBottomButtons(language: LanguagesSelection(), text: TextData())
+        OutputBottomButtons()
+            .environmentObject(LanguagesSelection())
+            .environmentObject(TextData())
     }
 }

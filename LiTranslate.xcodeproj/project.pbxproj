@@ -33,6 +33,9 @@
 		4E8E26C728AABAEB0075598D /* TranslationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26C628AABAEB0075598D /* TranslationParsing.swift */; };
 		4E8E26CA28ABB4DB0075598D /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26C928ABB4DB0075598D /* Links.swift */; };
 		4E8E26CC28ABD9FA0075598D /* TextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26CB28ABD9FA0075598D /* TextData.swift */; };
+		4E99599F28B528C000510672 /* LanguagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99599E28B528C000510672 /* LanguagesListView.swift */; };
+		4E9959A128B53F5000510672 /* TextMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9959A028B53F5000510672 /* TextMethod.swift */; };
+		4E9959A328B54D4200510672 /* FlagImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9959A228B54D4200510672 /* FlagImageView.swift */; };
 		4EB16E8E28AD189200B0F205 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB16E8D28AD189200B0F205 /* ScanButton.swift */; };
 		4EDDD1DC28B372E600A634EE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DB28B372E500A634EE /* SettingsView.swift */; };
 		4EDDD1DE28B39FA200A634EE /* DefaultInstancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */; };
@@ -68,6 +71,9 @@
 		4E8E26C628AABAEB0075598D /* TranslationParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationParsing.swift; sourceTree = "<group>"; };
 		4E8E26C928ABB4DB0075598D /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		4E8E26CB28ABD9FA0075598D /* TextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextData.swift; sourceTree = "<group>"; };
+		4E99599E28B528C000510672 /* LanguagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesListView.swift; sourceTree = "<group>"; };
+		4E9959A028B53F5000510672 /* TextMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMethod.swift; sourceTree = "<group>"; };
+		4E9959A228B54D4200510672 /* FlagImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImageView.swift; sourceTree = "<group>"; };
 		4EB16E8D28AD189200B0F205 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		4EDDD1DB28B372E500A634EE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4EDDD1DD28B39FA200A634EE /* DefaultInstancePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInstancePicker.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				4E8E26C928ABB4DB0075598D /* Links.swift */,
 				4E2D0BFB28AEBB6400006797 /* Keys.swift */,
 				4E2D0C0128AFAD4B00006797 /* Names.swift */,
+				4E9959A028B53F5000510672 /* TextMethod.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -203,6 +210,8 @@
 				4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */,
 				4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */,
 				4E8E26BC28A7BA770075598D /* InputTranslationView.swift */,
+				4E99599E28B528C000510672 /* LanguagesListView.swift */,
+				4E9959A228B54D4200510672 /* FlagImageView.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";
@@ -312,6 +321,7 @@
 				4E8E26C528AABADD0075598D /* TranslationDecode.swift in Sources */,
 				4E4E5CCB28A69D76005B5195 /* HomeView.swift in Sources */,
 				4E2D0C0228AFAD4B00006797 /* Names.swift in Sources */,
+				4E9959A328B54D4200510672 /* FlagImageView.swift in Sources */,
 				4EDDD1DE28B39FA200A634EE /* DefaultInstancePicker.swift in Sources */,
 				4E8E26CA28ABB4DB0075598D /* Links.swift in Sources */,
 				4E2D0BF828AEB60F00006797 /* BookmarkView.swift in Sources */,
@@ -328,10 +338,12 @@
 				4E4E5CC928A69D76005B5195 /* LiTranslateApp.swift in Sources */,
 				4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */,
 				4EB16E8E28AD189200B0F205 /* ScanButton.swift in Sources */,
+				4E99599F28B528C000510672 /* LanguagesListView.swift in Sources */,
 				4E2D0BF328AEA2DB00006797 /* ActivityViewController.swift in Sources */,
 				4E8E26B128A6B8720075598D /* Languages.swift in Sources */,
 				4E8E26C028A81B9F0075598D /* SpeechSynthesis.swift in Sources */,
 				4E8E26C728AABAEB0075598D /* TranslationParsing.swift in Sources */,
+				4E9959A128B53F5000510672 /* TextMethod.swift in Sources */,
 				4E2D0BFE28AEBDF600006797 /* BookmarksData.swift in Sources */,
 				4E8E26BD28A7BA770075598D /* InputTranslationView.swift in Sources */,
 				4EDDD1DC28B372E600A634EE /* SettingsView.swift in Sources */,

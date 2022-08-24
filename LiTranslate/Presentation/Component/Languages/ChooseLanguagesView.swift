@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct ChooseLanguagesView: View {
-    @ObservedObject var language: LanguagesSelection
-    @ObservedObject var text: TextData
-
+    @EnvironmentObject private var selection: LanguagesSelection
+    @EnvironmentObject private var textData: TextData
     @EnvironmentObject private var instance: InstanceURL
     
     var body: some View {
         HStack {
-            Picker(selection: $language.input, label: Text("Language")) {
-                ForEach(Languages.allCases, id: \.self) { language in
-                    Text(language.getCountryName()).tag(language)
-                }
+            NavigationLink {
+                LanguagesListView(textMethod: .input, languages: selection)
+            } label: {
+                FlagImageView(language: $selection.input, color: Color(uiColor: .systemBlue))
+                Text(selection.input.getCountryName())
             }
             Spacer()
             Button {
-                (language.input, language.output) = (language.output, language.input)
+                (selection.input, selection.output) = (selection.output, selection.input)
                 TranslationParsing
                     .parse(url: instance.getURL(),
-                           text: text.input,
-                           inputLanguage: language.input,
-                           outputLanguage: language.output) { data in
+                           text: textData.input,
+                           inputLanguage: selection.input,
+                           outputLanguage: selection.output) { data in
                         DispatchQueue.main.async {
-                            text.output = data.translatedText
+                            textData.output = data.translatedText
                         }
                     }
             } label: {
@@ -37,19 +37,20 @@ struct ChooseLanguagesView: View {
                     .rotationEffect(.degrees(-Double(Numbers.ninety)))
             }
             Spacer()
-            Picker(selection: $language.output, label: Text("Language")) {
-                ForEach(Languages.allCases, id: \.self) { language in
-                    Text(language.getCountryName()).tag(language)
-                }
+            NavigationLink {
+                LanguagesListView(textMethod: .output, languages: selection)
+            } label: {
+                Text(selection.output.getCountryName())
+                FlagImageView(language: $selection.output, color: Color(uiColor: .systemBlue))
             }
-            .onChange(of: language.output) { newValue in
+            .onChange(of: selection.output) { newValue in
                 TranslationParsing
                     .parse(url: instance.getURL(),
-                           text: text.input,
-                           inputLanguage: language.input,
-                           outputLanguage: language.output) { data in
+                           text: textData.input,
+                           inputLanguage: selection.input,
+                           outputLanguage: selection.output) { data in
                         DispatchQueue.main.async {
-                            text.output = data.translatedText
+                            textData.output = data.translatedText
                         }
                     }
             }
@@ -61,6 +62,8 @@ struct ChooseLanguagesView: View {
 
 struct ChooseLanguagesView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseLanguagesView(language: LanguagesSelection(), text: TextData())
+        ChooseLanguagesView()
+            .environmentObject(LanguagesSelection())
+            .environmentObject(TextData())
     }
 }

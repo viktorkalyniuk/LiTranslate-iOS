@@ -9,14 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            OutputTranslationView()
-            InputTranslationView()
-                .padding(.top)
-                .padding(.top)
+        NavigationView {
+            VStack {
+                OutputTranslationView()
+                InputTranslationView()
+                    .padding(.top)
+                    .padding(.top)
+            }
+            .padding()
+            .background(Color(uiColor: .systemGray5))
+            .navigationBarHidden(true)
         }
-        .padding()
-        .background(Color(uiColor: .systemGray5))
     }
 }
 

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ActivityViewController: UIViewControllerRepresentable {
-
     var activityItems: [Any]
     var applicationActivities: [UIActivity]? = nil
+    
     @Environment(\.presentationMode) var presentationMode
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityViewController>) -> UIActivityViewController {

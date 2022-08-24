@@ -20,6 +20,7 @@ struct OutputTranslationView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 TextEditor(text: .constant(textData.output))
+                    .padding()
                 Button {
                     let bookmark = BookmarkModel(
                         inputLanguage:
@@ -41,9 +42,9 @@ struct OutputTranslationView: View {
                 .disabled(textData.output.isEmpty)
                 .padding([.top, .trailing])
             }
-            OutputBottomButtons(language: selection, text: textData)
+            OutputBottomButtons()
         }
-        .padding()
+//        .padding()
         .background(Color(uiColor: .systemGray6))
         .cornerRadius(CGFloat(Numbers.twentyFive))
     }

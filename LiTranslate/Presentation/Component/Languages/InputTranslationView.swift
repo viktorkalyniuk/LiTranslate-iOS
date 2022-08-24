@@ -10,7 +10,6 @@ import SwiftUI
 struct InputTranslationView: View {
     @EnvironmentObject private var selection: LanguagesSelection
     @EnvironmentObject private var textData: TextData
-    @EnvironmentObject private var instance: InstanceURL
 
     init() {
         UITextView.appearance().backgroundColor = .clear
@@ -18,27 +17,12 @@ struct InputTranslationView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            ChooseLanguagesView(language: selection, text: textData)
+            ChooseLanguagesView()
                 .padding()
                 .background(Color(uiColor: .systemBlue).ignoresSafeArea())
             HStack(alignment: .top) {
                 TextEditor(text: $textData.input)
-                    .onChange(of: textData.input) { _ in
-                        TranslationParsing
-                            .parse(
-                                url:
-                                    instance.getURL(),
-                                text:
-                                    textData.input,
-                                inputLanguage:
-                                    selection.input,
-                                outputLanguage: selection.output
-                            ) { data in
-                                DispatchQueue.main.async {
-                                    textData.output = data.translatedText
-                                }
-                            }
-                    }
+                    .padding([.leading, .trailing, .bottom])
                 Button {
                     textData.input = ""
                     textData.output = ""
@@ -50,8 +34,7 @@ struct InputTranslationView: View {
                            Numbers.zero : Numbers.one))
                 .padding([.top, .trailing])
             }
-            InputBottomButtons(language: selection,
-                               text: textData)
+            InputBottomButtons()
         }
 //        .padding()
         .background(Color(uiColor: .systemGray6))
