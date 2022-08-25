@@ -21,26 +21,7 @@ struct OutputTranslationView: View {
             HStack(alignment: .top) {
                 TextEditor(text: .constant(textData.output))
                     .padding()
-                Button {
-                    let bookmark = BookmarkModel(
-                        inputLanguage:
-                            selection.input,
-                        outputLanguage:
-                            selection.output,
-                        inputText:
-                            textData.input,
-                        outputText:
-                            textData.output
-                    )
-                    bookmarksData
-                        .array
-                        .insert(bookmark, at: 0)
-                } label: {
-                    Image(systemName: SystemNames.bookmark)
-                }
-                .opacity(Double(textData.output.isEmpty ? Numbers.zero : Numbers.one))
-                .disabled(textData.output.isEmpty)
-                .padding([.top, .trailing])
+                BookmarkButton()
             }
             OutputBottomButtons()
         }
@@ -55,5 +36,6 @@ struct OutputTranslationView_Previews: PreviewProvider {
         OutputTranslationView()
             .environmentObject(LanguagesSelection())
             .environmentObject(TextData())
+            .environmentObject(BookmarksData())
     }
 }

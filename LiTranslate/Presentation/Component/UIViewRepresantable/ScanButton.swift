@@ -2,7 +2,8 @@
 //  ScanButton.swift
 //  LiTranslate
 //
-//  Created by Viktor Kalyniuk on 17.08.2022.
+//  Thanks for the guide:
+//  https://www.raywenderlich.com/28189776-capturing-text-from-camera-using-swiftui
 //
 
 import SwiftUI

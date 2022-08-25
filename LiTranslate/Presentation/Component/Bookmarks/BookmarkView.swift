@@ -21,12 +21,10 @@ struct BookmarkView: View {
                 Image(systemName: SystemNames.arrowRight)
                 FlagImageView(language: .constant(outputLanguage), color: Color(uiColor: .secondarySystemBackground))
             }
-//                .padding()
             Text("\(inputText)")
                 .padding(.top)
             Divider()
             Text("\(outputText)")
-//                .padding()
         }
         .padding()
     }
