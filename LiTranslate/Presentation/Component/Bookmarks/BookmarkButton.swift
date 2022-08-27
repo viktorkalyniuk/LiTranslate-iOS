@@ -23,16 +23,9 @@ struct BookmarkButton: View {
                     textData: textData
                 )
             } else {
-                let bookmark = BookmarkModel(
-                    inputLanguage:
-                        selection.input,
-                    outputLanguage:
-                        selection.output,
-                    inputText:
-                        textData.input,
-                    outputText:
-                        textData.output
-                )
+                let bookmark = BookmarksOperator(selection: selection,
+                                                 textData: textData)
+                    .createModel()
                 bookmarksData
                     .array
                     .insert(bookmark, at: 0)

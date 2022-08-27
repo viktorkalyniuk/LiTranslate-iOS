@@ -14,7 +14,8 @@ struct TranslationParsing {
             let parameters: [String: String] = [
                 "q": "\(text)",
                 "source": "\(inputLanguage.rawValue)",
-                "target": "\(outputLanguage.rawValue)"
+                "target": "\(outputLanguage.rawValue)",
+                "format": "text"
             ]
 
             var request = URLRequest(url: url)

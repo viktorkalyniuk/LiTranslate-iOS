@@ -2,7 +2,7 @@
 //  TextData.swift
 //  LiTranslate
 //
-//  Created by vktr on 16.08.2022.
+//  Created by Viktor Kalyniuk on 16.08.2022.
 //
 
 import Foundation
