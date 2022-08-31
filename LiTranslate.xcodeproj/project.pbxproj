@@ -215,8 +215,8 @@
 				4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */,
 				4E8E26BA28A7B92C0075598D /* OutputTranslationView.swift */,
 				4E8E26BC28A7BA770075598D /* InputTranslationView.swift */,
-				4E99599E28B528C000510672 /* LanguagesListView.swift */,
 				4E9959A228B54D4200510672 /* FlagImageView.swift */,
+				4E99599E28B528C000510672 /* LanguagesListView.swift */,
 			);
 			path = Languages;
 			sourceTree = "<group>";

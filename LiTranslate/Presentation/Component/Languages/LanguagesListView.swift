@@ -12,11 +12,15 @@ struct LanguagesListView: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
+    @State private var searchText: String = ""
+
     var textMethod: TextMethod
 
     var body: some View {
         List {
-            ForEach(Languages.allCases, id: \.self) { language in
+            ForEach(searchText.isEmpty ?
+                    Languages.allCases :
+                        Languages.allCases.filter { $0.getCountryName().contains(searchText) }, id: \.self) { language in
                 Button {
                     switch textMethod {
                     case .input:
@@ -32,6 +36,9 @@ struct LanguagesListView: View {
                     }
                 }
             }
+            .searchable(text: $searchText,
+                        placement: .navigationBarDrawer(displayMode: .always),
+                        prompt: "Search")
             .listRowBackground(Color(uiColor: .systemGray6))
         }
         .background(Color(uiColor: .systemGray5))
