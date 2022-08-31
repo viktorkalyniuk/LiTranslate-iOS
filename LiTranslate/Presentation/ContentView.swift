@@ -17,6 +17,11 @@ struct ContentView: View {
 
     init() {
         let _ = UIPasteboard.general
+
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().backgroundColor = .systemGray5
     }
     
     var body: some View {
