@@ -15,13 +15,25 @@ struct ContentView: View {
 
     @State private var tabSelection: Int = Numbers.one
 
+    let navigationAppearance = UINavigationBarAppearance()
+    let tabBarAppearance = UITabBarAppearance()
+
     init() {
         let _ = UIPasteboard.general
 
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
-        UITabBar.appearance().isTranslucent = true
-        UITabBar.appearance().backgroundColor = .systemGray5
+        navigationAppearance.configureWithTransparentBackground()
+        navigationAppearance.backgroundColor = .systemGray5
+        
+        UINavigationBar.appearance().standardAppearance = navigationAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
+
+        tabBarAppearance.configureWithTransparentBackground()
+        tabBarAppearance.backgroundColor = .systemGray5
+
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+
+        UITableView.appearance().backgroundColor = .clear
     }
     
     var body: some View {

@@ -33,9 +33,6 @@ struct BookmarksView: View {
         }
         .background(Color(uiColor: .systemGray5))
         .listStyle(SidebarListStyle())
-        .onAppear {
-            UITableView.appearance().backgroundColor = .clear
-        }
     }
 }
 

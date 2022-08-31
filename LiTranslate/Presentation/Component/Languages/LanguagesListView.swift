@@ -15,22 +15,27 @@ struct LanguagesListView: View {
     var textMethod: TextMethod
 
     var body: some View {
-        List(Languages.allCases, id: \.self) { language in
-            Button {
-                switch textMethod {
-                case .input:
-                    languages.input = language
-                case .output:
-                    languages.output = language
-                }
-                self.mode.wrappedValue.dismiss()
-            } label: {
-                HStack {
-                    FlagImageView(language: .constant(language), color: Color(uiColor: .secondarySystemBackground))
-                    Text(language.getCountryName())
+        List {
+            ForEach(Languages.allCases, id: \.self) { language in
+                Button {
+                    switch textMethod {
+                    case .input:
+                        languages.input = language
+                    case .output:
+                        languages.output = language
+                    }
+                    self.mode.wrappedValue.dismiss()
+                } label: {
+                    HStack {
+                        FlagImageView(language: .constant(language), color: Color(uiColor: .systemGray5))
+                        Text(language.getCountryName())
+                    }
                 }
             }
+            .listRowBackground(Color(uiColor: .systemGray6))
         }
+        .background(Color(uiColor: .systemGray5))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

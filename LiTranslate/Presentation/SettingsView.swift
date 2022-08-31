@@ -102,9 +102,6 @@ struct SettingsView: View {
             }
             .background(backgroundColor)
         }
-        .onAppear {
-            UITableView.appearance().backgroundColor = .clear
-        }
     }
 }
 
