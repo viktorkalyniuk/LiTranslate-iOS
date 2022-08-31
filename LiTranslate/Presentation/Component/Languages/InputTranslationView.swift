@@ -20,7 +20,7 @@ struct InputTranslationView: View, KeyboardReadable {
                 .background(Color(uiColor: .systemBlue).ignoresSafeArea())
             HStack(alignment: .top) {
                 TextEditor(text: $textData.input)
-                    .padding([.leading, .trailing, .bottom])
+                    .padding([.leading, .trailing])
                     .onReceive(keyboardPublisher) { isVisible in
                         isKeyboardVisible = isVisible
                     }

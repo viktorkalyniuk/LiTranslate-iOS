@@ -23,6 +23,7 @@ struct BookmarksView: View {
                 
                 BookmarkView(tabSelection: $tabSelection,
                              bookmarkModel: bookmarkModel)
+                .buttonStyle(.plain)
                 .background(Color(uiColor: .systemGray6))
                 .cornerRadius(CGFloat(Numbers.twentyFive))
             }
