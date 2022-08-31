@@ -19,8 +19,12 @@ struct OutputTranslationView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
-                TextEditor(text: .constant(textData.output))
-                    .padding()
+                ScrollView {
+                    Text(textData.output)
+                        .textSelection(.enabled)
+                        .padding()
+                }
+                Spacer()
                 BookmarkButton(bookmarkModel:
                                 BookmarkModel(
                                     inputLanguage: selection.input,

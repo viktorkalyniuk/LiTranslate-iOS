@@ -25,7 +25,6 @@ struct InputBottomButtons: View {
                     .padding()
             }
             .disabled(!SpeechSynthesis.canSynthesis(language: selection.input))
-
             Button {
                 UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
             } label: {
@@ -38,18 +37,13 @@ struct InputBottomButtons: View {
             Spacer()
             Button {
                 TranslationParsing
-                            .parse(
-                                url:
-                                    instance.getURL(),
-                                text:
-                                    textData.input,
-                                inputLanguage:
-                                    selection.input,
-                                outputLanguage: selection.output
-                            ) { data in
-                                DispatchQueue.main.async {
-                                    textData.output = data.translatedText
-                                }
+                            .parse(url: instance.getURL(),
+                                   text: textData.input,
+                                   inputLanguage: selection.input,
+                                   outputLanguage: selection.output) { data in
+                                        DispatchQueue.main.async {
+                                            textData.output = data.translatedText
+                                        }
                             }
                 UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
             } label: {

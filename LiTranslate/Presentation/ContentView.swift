@@ -14,6 +14,10 @@ struct ContentView: View {
     @StateObject private var instance: InstanceURL = InstanceURL()
 
     @State private var tabSelection: Int = Numbers.one
+
+    init() {
+        let _ = UIPasteboard.general
+    }
     
     var body: some View {
         TabView(selection: $tabSelection) {
