@@ -8,46 +8,34 @@
 import SwiftUI
 
 struct BookmarkButton: View {
-    @EnvironmentObject var selection: LanguagesSelection
-    @EnvironmentObject var textData: TextData
     @EnvironmentObject var bookmarksData: BookmarksData
+
+    var bookmarkModel: BookmarkModel
     
     var body: some View {
         Button {
-            if bookmarksData.isDataInArray(
-                selection: selection,
-                textData: textData
-            ) {
-                bookmarksData.removeDataInArray(
-                    selection: selection,
-                    textData: textData
-                )
+            if bookmarksData.isDataInArray(bookmarkModel: bookmarkModel) {
+                bookmarksData.removeDataInArray(bookmarkModel: bookmarkModel)
             } else {
-                let bookmark = BookmarksOperator(selection: selection,
-                                                 textData: textData)
-                    .createModel()
-                bookmarksData
-                    .array
-                    .insert(bookmark, at: 0)
+                bookmarksData.array.insert(bookmarkModel, at: 0)
             }
         } label: {
-            if bookmarksData.isDataInArray(selection: selection, textData: textData) {
+            if bookmarksData.isDataInArray(bookmarkModel: bookmarkModel) {
                 Image(systemName: SystemNames.bookmarkFill)
             } else {
                 Image(systemName: SystemNames.bookmark)
             }
         }
-        .opacity(Double(textData.output.isEmpty ? Numbers.zero : Numbers.one))
-        .disabled(textData.output.isEmpty)
-        .padding([.top, .trailing])
+        .foregroundColor(Color(uiColor: .systemBlue))
+        .opacity(Double(bookmarkModel.outputText.isEmpty ? Numbers.zero : Numbers.one))
+        .disabled(bookmarkModel.outputText.isEmpty)
     }
 }
 
 struct BookmarkButton_Previews: PreviewProvider {
     static var previews: some View {
-        BookmarkButton()
-            .environmentObject(LanguagesSelection())
-            .environmentObject(TextData())
+        let testBookMarkModel: BookmarkModel = BookmarkModel.getTestModel()
+        BookmarkButton(bookmarkModel: testBookMarkModel)
             .environmentObject(BookmarksData())
     }
 }

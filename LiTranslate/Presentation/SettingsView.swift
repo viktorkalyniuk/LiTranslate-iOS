@@ -101,8 +101,6 @@ struct SettingsView: View {
                 .textCase(nil)
             }
             .background(backgroundColor)
-//            .buttonStyle(.plain)
-//            .foregroundColor(.red)
         }
         .onAppear {
             UITableView.appearance().backgroundColor = .clear

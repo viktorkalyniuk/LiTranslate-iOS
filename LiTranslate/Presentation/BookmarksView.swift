@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct BookmarksView: View {
-    @EnvironmentObject private var selection: LanguagesSelection
-    @EnvironmentObject private var textData: TextData
     @EnvironmentObject private var bookmarksData: BookmarksData
 
     @Binding var tabSelection: Int
@@ -17,26 +15,14 @@ struct BookmarksView: View {
     var body: some View {
         List {
             ForEach(bookmarksData.array, id: \.self) { bookmark in
-                Button {
-                    selection.output = bookmark.outputLanguage
-                    selection.input = bookmark.inputLanguage
-                    textData.output = bookmark.outputText
-                    textData.input = bookmark.inputText
-
-                    self.tabSelection = 1
-                } label: {
-                    BookmarkView(
-                        inputLanguage:
-                            bookmark.inputLanguage,
-                        outputLanguage:
-                            bookmark.outputLanguage,
-                        inputText:
-                            bookmark.inputText,
-                        outputText:
-                            bookmark.outputText
-                    )
-                }
-                .buttonStyle(.plain)
+                let bookmarkModel = BookmarkModel(
+                    inputLanguage: bookmark.inputLanguage,
+                    outputLanguage: bookmark.outputLanguage,
+                    inputText: bookmark.inputText,
+                    outputText: bookmark.outputText)
+                
+                BookmarkView(tabSelection: $tabSelection,
+                             bookmarkModel: bookmarkModel)
                 .background(Color(uiColor: .systemGray6))
                 .cornerRadius(CGFloat(Numbers.twentyFive))
             }

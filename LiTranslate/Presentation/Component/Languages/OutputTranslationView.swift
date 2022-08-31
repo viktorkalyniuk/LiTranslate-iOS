@@ -21,11 +21,16 @@ struct OutputTranslationView: View {
             HStack(alignment: .top) {
                 TextEditor(text: .constant(textData.output))
                     .padding()
-                BookmarkButton()
+                BookmarkButton(bookmarkModel:
+                                BookmarkModel(
+                                    inputLanguage: selection.input,
+                                    outputLanguage: selection.output,
+                                    inputText: textData.input,
+                                    outputText: textData.output))
+                .padding([.top, .trailing])
             }
             OutputBottomButtons()
         }
-//        .padding()
         .background(Color(uiColor: .systemGray6))
         .cornerRadius(CGFloat(Numbers.twentyFive))
     }

@@ -18,25 +18,17 @@ class BookmarksData: ObservableObject {
         array = getArray()
     }
 
-    func isDataInArray(selection: LanguagesSelection, textData: TextData) -> Bool {
+    func isDataInArray(bookmarkModel: BookmarkModel) -> Bool {
         for model in array {
-            if model.inputLanguage == selection.input &&
-                model.outputLanguage == selection.output &&
-                model.inputText == textData.input &&
-                model.outputText == textData.output {
+            if model == bookmarkModel {
                 return true
             }
         }
         return false
     }
 
-    func removeDataInArray(selection: LanguagesSelection, textData: TextData) {
-        let bookmark: BookmarkModel = BookmarkModel(inputLanguage: selection.input,
-                                                    outputLanguage: selection.output,
-                                                    inputText: textData.input,
-                                                    outputText: textData.output)
-
-        if let index = array.firstIndex(of: bookmark) {
+    func removeDataInArray(bookmarkModel: BookmarkModel) {
+        if let index = array.firstIndex(of: bookmarkModel) {
             array.remove(at: index)
         }
     }

@@ -8,23 +8,43 @@
 import SwiftUI
 
 struct BookmarkView: View {
-    @State var inputLanguage: Languages
-    @State var outputLanguage: Languages
+    @EnvironmentObject private var selection: LanguagesSelection
+    @EnvironmentObject private var textData: TextData
 
-    @State var inputText: String
-    @State var outputText: String
+    @Binding var tabSelection: Int
+    
+    var bookmarkModel: BookmarkModel
 
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                FlagImageView(language: .constant(inputLanguage), color: Color(uiColor: .systemGray6))
-                Image(systemName: SystemNames.arrowRight)
-                FlagImageView(language: .constant(outputLanguage), color: Color(uiColor: .secondarySystemBackground))
+                HStack {
+                    FlagImageView(language: .constant(bookmarkModel.inputLanguage), color: Color(uiColor: .systemGray6))
+                    Image(systemName: SystemNames.arrowRight)
+                    FlagImageView(language: .constant(bookmarkModel.outputLanguage), color: Color(uiColor: .secondarySystemBackground))
+                }
+                .onTapGesture {
+                    bookmarkModel.assignTo(selection: selection,
+                                           textData: textData)
+
+                    self.tabSelection = 1
+                }
+                Spacer()
+                BookmarkButton(bookmarkModel: bookmarkModel)
+                    .padding(.bottom)
             }
-            Text("\(inputText)")
-                .padding(.top)
-            Divider()
-            Text("\(outputText)")
+            VStack(alignment: .leading) {
+                Text("\(bookmarkModel.inputText)")
+                    .padding(.top)
+                Divider()
+                Text("\(bookmarkModel.outputText)")
+            }
+            .onTapGesture {
+                bookmarkModel.assignTo(selection: selection,
+                                       textData: textData)
+                
+                self.tabSelection = 1
+            }
         }
         .padding()
     }
@@ -32,6 +52,10 @@ struct BookmarkView: View {
 
 struct BookmarkView_Previews: PreviewProvider {
     static var previews: some View {
-        BookmarkView(inputLanguage: Languages.uk, outputLanguage: Languages.fr, inputText: "Hello", outputText: "Bonjour")
+        let testBookmarkModel: BookmarkModel = BookmarkModel.getTestModel()
+        BookmarkView(tabSelection: .constant(2), bookmarkModel: testBookmarkModel)
+            .environmentObject(LanguagesSelection())
+            .environmentObject(TextData())
+            .environmentObject(BookmarksData())
     }
 }
