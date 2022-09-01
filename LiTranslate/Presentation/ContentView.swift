@@ -31,7 +31,7 @@ struct ContentView: View {
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = .systemGray5
 
-        UITableView.appearance().backgroundColor = .clear
+        UITableView.appearance().backgroundColor = .systemGray5
     }
     
     var body: some View {
