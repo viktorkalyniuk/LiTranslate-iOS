@@ -10,39 +10,49 @@ import SwiftUI
 struct LanguagesListView: View {
     @ObservedObject var languages: LanguagesSelection
 
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Environment(\.dismiss) var dismissView
 
     @State private var searchText: String = ""
+    @State private var languagesArray: [Languages] = Languages.allCases
+    @State private var listID: Int = Numbers.one
 
     var textMethod: TextMethod
 
     var body: some View {
         List {
-            ForEach(searchText.isEmpty ?
-                    Languages.allCases :
-                        Languages.allCases.filter { $0.getCountryName().contains(searchText) }, id: \.self) { language in
-                Button {
+            Section() {
+                TextField("Search", text: $searchText)
+            }
+            ForEach(languagesArray, id: \.self) { language in
+                LanguageView(language: language,
+                             flagBorderColor: Color(uiColor: .systemGray6))
+                .onTapGesture {
                     switch textMethod {
                     case .input:
                         languages.input = language
                     case .output:
                         languages.output = language
                     }
-                    self.mode.wrappedValue.dismiss()
-                } label: {
-                    HStack {
-                        FlagImageView(language: .constant(language), color: Color(uiColor: .systemGray5))
-                        Text(language.getCountryName())
+                    dismissView()
+                }
+            }
+            .listRowBackground(Color(uiColor: .systemGray6))
+            .onChange(of: searchText) { _ in
+                if searchText.isEmpty {
+                    languagesArray = Languages.allCases
+                } else {
+                    languagesArray = Languages.allCases.filter {
+                        $0.getCountryName().contains(searchText)
                     }
                 }
             }
-            .searchable(text: $searchText,
-                        placement: .navigationBarDrawer(displayMode: .always),
-                        prompt: "Search")
-            .listRowBackground(Color(uiColor: .systemGray6))
         }
+        .id(listID)
         .background(Color(uiColor: .systemGray5))
         .navigationBarTitleDisplayMode(.inline)
+        .onDisappear {
+            listID += Numbers.one
+        }
     }
 }
 

@@ -16,7 +16,6 @@ struct ContentView: View {
     @State private var tabSelection: Int = Numbers.one
 
     let navigationAppearance = UINavigationBarAppearance()
-    let tabBarAppearance = UITabBarAppearance()
 
     init() {
         let _ = UIPasteboard.general
@@ -27,11 +26,10 @@ struct ContentView: View {
         UINavigationBar.appearance().standardAppearance = navigationAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
 
-        tabBarAppearance.configureWithTransparentBackground()
-        tabBarAppearance.backgroundColor = .systemGray5
-
-        UITabBar.appearance().standardAppearance = tabBarAppearance
-        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().backgroundColor = .systemGray5
 
         UITableView.appearance().backgroundColor = .clear
     }
