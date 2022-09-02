@@ -14,13 +14,11 @@ struct DefaultInstancePicker: View {
 
     @EnvironmentObject var instance: InstanceURL
 
-    private let textColor: Color = Color(uiColor: .secondaryLabel)
-
     var body: some View {
         Picker(defaultInstancesTitle, selection: $instance.defaultURL) {
             ForEach(Links.LibreTranslateMirrors.allCases, id: \.self) { url in
                 Text(url.rawValue)
-                    .foregroundColor(textColor)
+                    .foregroundColor(Colors.Foreground.secondaryLabel)
             }
         }
         .onChange(of: instance.defaultURL) { newValue in

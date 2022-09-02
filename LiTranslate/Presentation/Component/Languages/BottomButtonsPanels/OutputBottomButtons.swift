@@ -38,7 +38,6 @@ struct OutputBottomButtons: View {
                 ActivityViewController(activityItems: [textData.output])
             }
             .disabled(textData.output.isEmpty)
-//            .padding(.trailing)
         }
         .padding(.trailing)
     }

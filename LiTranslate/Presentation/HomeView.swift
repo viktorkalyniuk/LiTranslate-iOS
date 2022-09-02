@@ -17,7 +17,7 @@ struct HomeView: View {
                     .padding(.top)
             }
             .padding()
-            .background(Color(uiColor: .systemGray5))
+            .background(Colors.Background.mainView)
             .navigationBarHidden(true)
         }
     }

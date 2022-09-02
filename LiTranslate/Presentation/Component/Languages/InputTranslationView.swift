@@ -17,7 +17,7 @@ struct InputTranslationView: View, KeyboardReadable {
         VStack(alignment: .leading) {
             ChooseLanguagesView()
                 .padding()
-                .background(Color(uiColor: .systemBlue).ignoresSafeArea())
+                .background(Colors.Background.chooseLanguageView.ignoresSafeArea())
             HStack(alignment: .top) {
                 TextEditor(text: $textData.input)
                     .padding([.leading, .trailing])
@@ -38,7 +38,7 @@ struct InputTranslationView: View, KeyboardReadable {
             InputBottomButtons(isKeyboardVisible: $isKeyboardVisible)
         }
 //        .padding()
-        .background(Color(uiColor: .systemGray6))
+        .background(Colors.Background.primaryView)
         .cornerRadius(CGFloat(Numbers.twentyFive))
     }
 }

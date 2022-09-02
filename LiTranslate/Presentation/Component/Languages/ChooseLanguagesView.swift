@@ -17,7 +17,7 @@ struct ChooseLanguagesView: View {
             NavigationLink {
                 LanguagesListView(languages: selection, textMethod: .input)
             } label: {
-                FlagImageView(language: $selection.input, color: Color(uiColor: .systemBlue))
+                FlagImageView(language: $selection.input, color: Colors.Background.chooseLanguageView)
                 Text(selection.input.getCountryName())
             }
             Spacer()
@@ -41,7 +41,7 @@ struct ChooseLanguagesView: View {
                 LanguagesListView(languages: selection, textMethod: .output)
             } label: {
                 Text(selection.output.getCountryName())
-                FlagImageView(language: $selection.output, color: Color(uiColor: .systemBlue))
+                FlagImageView(language: $selection.output, color: Colors.Background.chooseLanguageView)
             }
             .onChange(of: selection.output) { newValue in
                 TranslationParsing
@@ -55,7 +55,7 @@ struct ChooseLanguagesView: View {
                     }
             }
         }
-        .foregroundColor(Color.white)
+        .foregroundColor(Colors.Foreground.chooseLanguageView)
         .padding(.horizontal)
     }
 }

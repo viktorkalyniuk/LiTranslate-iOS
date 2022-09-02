@@ -26,7 +26,7 @@ struct BookmarkButton: View {
                 Image(systemName: SystemNames.bookmark)
             }
         }
-        .foregroundColor(Color(uiColor: .systemBlue))
+        .foregroundColor(Colors.Foreground.primaryButton)
         .opacity(Double(bookmarkModel.outputText.isEmpty ? Numbers.zero : Numbers.one))
         .disabled(bookmarkModel.outputText.isEmpty)
     }

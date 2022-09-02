@@ -21,11 +21,12 @@ struct LanguagesListView: View {
     var body: some View {
         List {
             Section() {
-                TextField("Search", text: $searchText)
+//                TextField("Search", text: $searchText)
+                SearchBarView(inputText: $searchText)
             }
             ForEach(languagesArray, id: \.self) { language in
                 LanguageView(language: language,
-                             flagBorderColor: Color(uiColor: .systemGray6))
+                             flagBorderColor: Colors.Background.primaryView)
                 .onTapGesture {
                     switch textMethod {
                     case .input:
@@ -36,7 +37,7 @@ struct LanguagesListView: View {
                     dismissView()
                 }
             }
-            .listRowBackground(Color(uiColor: .systemGray6))
+            .listRowBackground(Colors.Background.primaryView)
             .onChange(of: searchText) { _ in
                 if searchText.isEmpty {
                     languagesArray = Languages.allCases
@@ -48,7 +49,7 @@ struct LanguagesListView: View {
             }
         }
         .id(listID)
-        .background(Color(uiColor: .systemGray5))
+        .background(Colors.Background.mainView)
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear {
             listID += Numbers.one

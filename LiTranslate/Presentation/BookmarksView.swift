@@ -24,7 +24,7 @@ struct BookmarksView: View {
                 BookmarkView(tabSelection: $tabSelection,
                              bookmarkModel: bookmarkModel)
                 .buttonStyle(.plain)
-                .background(Color(uiColor: .systemGray6))
+                .background(Colors.Background.primaryView)
                 .cornerRadius(CGFloat(Numbers.twentyFive))
             }
             .onDelete { IndexSet in

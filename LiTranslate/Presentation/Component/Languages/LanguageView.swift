@@ -27,6 +27,6 @@ struct LanguageView: View {
 
 struct LanguageView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguageView(language: .uk, flagBorderColor: Color(uiColor: .systemGray5))
+        LanguageView(language: .uk, flagBorderColor: Colors.Background.mainView)
     }
 }

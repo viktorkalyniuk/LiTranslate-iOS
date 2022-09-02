@@ -21,7 +21,7 @@ struct ContentView: View {
         let _ = UIPasteboard.general
 
         navigationAppearance.configureWithTransparentBackground()
-        navigationAppearance.backgroundColor = .systemGray5
+        navigationAppearance.backgroundColor = Colors.UIColors.Background.main
         
         UINavigationBar.appearance().standardAppearance = navigationAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
@@ -29,9 +29,13 @@ struct ContentView: View {
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().isTranslucent = true
-        UITabBar.appearance().backgroundColor = .systemGray5
+        UITabBar.appearance().backgroundColor = Colors.UIColors.Background.main
 
-        UITableView.appearance().backgroundColor = .systemGray5
+        UITableView.appearance().backgroundColor = Colors.UIColors.Background.main
+
+        UIScrollView.appearance().keyboardDismissMode = .onDrag
+
+        UITextView.appearance().backgroundColor = .clear
     }
     
     var body: some View {

@@ -19,9 +19,9 @@ struct BookmarkView: View {
         VStack(alignment: .leading) {
             HStack {
                 HStack {
-                    FlagImageView(language: .constant(bookmarkModel.inputLanguage), color: Color(uiColor: .systemGray6))
+                    FlagImageView(language: .constant(bookmarkModel.inputLanguage), color: Colors.Background.primaryView)
                     Image(systemName: SystemNames.arrowRight)
-                    FlagImageView(language: .constant(bookmarkModel.outputLanguage), color: Color(uiColor: .secondarySystemBackground))
+                    FlagImageView(language: .constant(bookmarkModel.outputLanguage), color: Colors.Background.primaryView)
                 }
                 .onTapGesture {
                     bookmarkModel.assignTo(selection: selection,

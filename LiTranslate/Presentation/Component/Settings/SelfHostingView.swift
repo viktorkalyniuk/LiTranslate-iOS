@@ -21,10 +21,6 @@ struct SelfHostingView: View {
     private let instructionTitle = "Instruction"
     private let doneTitle = "Done"
 
-    private let backgroundColor: Color = Color(uiColor: .systemGray5)
-    private let listRowBackgroundColor: Color = Color(uiColor: .systemGray6)
-    private let rowTint: Color = Color(uiColor: .label)
-
     var body: some View {
         List {
             Section(selfHostingTitle) {
@@ -32,8 +28,8 @@ struct SelfHostingView: View {
                     .onAppear {
                         input = instance.selfHostURL
                     }
-                    .listRowBackground(listRowBackgroundColor)
-                    .foregroundColor(rowTint)
+//                    .listRowBackground(listRowBackgroundColor)
+                    .foregroundColor(Colors.Foreground.label)
             }
             .textCase(nil)
             Button {
@@ -41,9 +37,9 @@ struct SelfHostingView: View {
                 self.mode.wrappedValue.dismiss()
             } label: {
                 Text(useInstanceTitle)
-                    .foregroundColor(rowTint)
+                    .foregroundColor(Colors.Foreground.label)
             }
-            .listRowBackground(listRowBackgroundColor)
+//            .listRowBackground(listRowBackgroundColor)
             Section(infoTitle) {
                 if let url = URL(string: Links.Info.libreTranslateHosting) {
                     Link(destination: url) {
@@ -52,14 +48,14 @@ struct SelfHostingView: View {
                             Spacer()
                             Image(systemName: SystemNames.openLink)
                         }
-                        .foregroundColor(rowTint)
+                        .foregroundColor(Colors.Foreground.label)
                     }
-                    .listRowBackground(listRowBackgroundColor)
+//                    .listRowBackground(listRowBackgroundColor)
                 }
             }
             .textCase(nil)
         }
-        .background(backgroundColor)
+        .background(Colors.Background.mainView)
         .toolbar {
             Button {
                 instance.selfHostURL = input
@@ -67,9 +63,6 @@ struct SelfHostingView: View {
             } label: {
                 Text(doneTitle)
             }
-        }
-        .onAppear {
-            UITableView.appearance().backgroundColor = .clear
         }
     }
 }
