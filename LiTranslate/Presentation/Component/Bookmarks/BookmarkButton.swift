@@ -17,7 +17,7 @@ struct BookmarkButton: View {
             if bookmarksData.isDataInArray(bookmarkModel: bookmarkModel) {
                 bookmarksData.removeDataInArray(bookmarkModel: bookmarkModel)
             } else {
-                bookmarksData.array.insert(bookmarkModel, at: 0)
+                bookmarksData.array.insert(bookmarkModel, at: Numbers.zero)
             }
         } label: {
             if bookmarksData.isDataInArray(bookmarkModel: bookmarkModel) {

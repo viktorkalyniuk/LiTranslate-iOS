@@ -13,4 +13,5 @@ struct Keys {
     static let libreTranslateDefaultURL: String = "libreTranslateURL"
     static let languageInputSelection: String = "languageInputSelection"
     static let languageOutputSelection: String = "languageOutputSelection"
+    static let recentlyUsedLanguages: String = "recentlyUsedLanguages"
 }

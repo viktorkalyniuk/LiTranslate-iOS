@@ -13,6 +13,8 @@ struct Numbers {
     static let two: Int = 2
     static let three: Int = 3
 
+    static let six: Int = 6
+
     static let fourteen: Int = 14
 
     static let twentyFive: Int = 25

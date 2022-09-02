@@ -15,7 +15,7 @@ struct ChooseLanguagesView: View {
     var body: some View {
         HStack {
             NavigationLink {
-                LanguagesListView(languages: selection, textMethod: .input)
+                LanguagesListView(textMethod: .input)
             } label: {
                 FlagImageView(language: $selection.input, color: Colors.Background.chooseLanguageView)
                 Text(selection.input.getCountryName())
@@ -38,7 +38,7 @@ struct ChooseLanguagesView: View {
             }
             Spacer()
             NavigationLink {
-                LanguagesListView(languages: selection, textMethod: .output)
+                LanguagesListView(textMethod: .output)
             } label: {
                 Text(selection.output.getCountryName())
                 FlagImageView(language: $selection.output, color: Colors.Background.chooseLanguageView)

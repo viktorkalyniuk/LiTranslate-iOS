@@ -24,6 +24,7 @@
 		4E8DC28C28C0CEE0005FC3FB /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC28B28C0CEE0005FC3FB /* LanguageView.swift */; };
 		4E8DC28E28C20788005FC3FB /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC28D28C20788005FC3FB /* SearchBarView.swift */; };
 		4E8DC29028C212DB005FC3FB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC28F28C212DB005FC3FB /* Colors.swift */; };
+		4E8DC29228C25CE8005FC3FB /* RecentlyUsedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC29128C25CE8005FC3FB /* RecentlyUsedLanguages.swift */; };
 		4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */; };
 		4E8E26B128A6B8720075598D /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B028A6B8720075598D /* Languages.swift */; };
 		4E8E26B728A6E9BE0075598D /* SystemNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B628A6E9BE0075598D /* SystemNames.swift */; };
@@ -67,6 +68,7 @@
 		4E8DC28B28C0CEE0005FC3FB /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		4E8DC28D28C20788005FC3FB /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4E8DC28F28C212DB005FC3FB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		4E8DC29128C25CE8005FC3FB /* RecentlyUsedLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyUsedLanguages.swift; sourceTree = "<group>"; };
 		4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguagesView.swift; sourceTree = "<group>"; };
 		4E8E26B028A6B8720075598D /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		4E8E26B628A6E9BE0075598D /* SystemNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNames.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				4E8E26C228AA7E300075598D /* LanguagesSelection.swift */,
 				4E2D0BFD28AEBDF600006797 /* BookmarksData.swift */,
 				4EDDD1E328B3E97D00A634EE /* InstanceURL.swift */,
+				4E8DC29128C25CE8005FC3FB /* RecentlyUsedLanguages.swift */,
 			);
 			path = ObservableObjects;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				4E2D0BF828AEB60F00006797 /* BookmarkView.swift in Sources */,
 				4E8E26CC28ABD9FA0075598D /* TextData.swift in Sources */,
 				4E2D0BFA28AEB9E600006797 /* BookmarkModel.swift in Sources */,
+				4E8DC29228C25CE8005FC3FB /* RecentlyUsedLanguages.swift in Sources */,
 				4EDDD1E428B3E97D00A634EE /* InstanceURL.swift in Sources */,
 				4E2D0BEE28AE8B9200006797 /* InputBottomButtons.swift in Sources */,
 				4E2D0C0028AEDDA200006797 /* BookmarksView.swift in Sources */,
