@@ -25,6 +25,7 @@
 		4E8DC28E28C20788005FC3FB /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC28D28C20788005FC3FB /* SearchBarView.swift */; };
 		4E8DC29028C212DB005FC3FB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC28F28C212DB005FC3FB /* Colors.swift */; };
 		4E8DC29228C25CE8005FC3FB /* RecentlyUsedLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC29128C25CE8005FC3FB /* RecentlyUsedLanguages.swift */; };
+		4E8DC29428C666E5005FC3FB /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8DC29328C666E5005FC3FB /* LinkView.swift */; };
 		4E8E26AC28A6B3F10075598D /* ChooseLanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */; };
 		4E8E26B128A6B8720075598D /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B028A6B8720075598D /* Languages.swift */; };
 		4E8E26B728A6E9BE0075598D /* SystemNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E26B628A6E9BE0075598D /* SystemNames.swift */; };
@@ -69,6 +70,7 @@
 		4E8DC28D28C20788005FC3FB /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4E8DC28F28C212DB005FC3FB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4E8DC29128C25CE8005FC3FB /* RecentlyUsedLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyUsedLanguages.swift; sourceTree = "<group>"; };
+		4E8DC29328C666E5005FC3FB /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		4E8E26AB28A6B3F10075598D /* ChooseLanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguagesView.swift; sourceTree = "<group>"; };
 		4E8E26B028A6B8720075598D /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		4E8E26B628A6E9BE0075598D /* SystemNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNames.swift; sourceTree = "<group>"; };
@@ -184,9 +186,10 @@
 			children = (
 				4E2D0BF128AEA27D00006797 /* UIViewRepresantable */,
 				4E8E26C128AA7D4A0075598D /* Languages */,
-				4E8DC28D28C20788005FC3FB /* SearchBarView.swift */,
 				4EDDD1E528B4017000A634EE /* Settings */,
 				4E9959AC28B7D26800510672 /* Bookmarks */,
+				4E8DC28D28C20788005FC3FB /* SearchBarView.swift */,
+				4E8DC29328C666E5005FC3FB /* LinkView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				4EDDD1DE28B39FA200A634EE /* DefaultInstancePicker.swift in Sources */,
 				4E8E26CA28ABB4DB0075598D /* Links.swift in Sources */,
 				4E2D0BF828AEB60F00006797 /* BookmarkView.swift in Sources */,
+				4E8DC29428C666E5005FC3FB /* LinkView.swift in Sources */,
 				4E8E26CC28ABD9FA0075598D /* TextData.swift in Sources */,
 				4E2D0BFA28AEB9E600006797 /* BookmarkModel.swift in Sources */,
 				4E8DC29228C25CE8005FC3FB /* RecentlyUsedLanguages.swift in Sources */,

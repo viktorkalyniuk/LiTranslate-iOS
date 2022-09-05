@@ -26,17 +26,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List() {
-                if let saveUkraineURL = URL(string: Links.Info.saveUkraine) {
-                    Link(destination: saveUkraineURL) {
-                        HStack {
-                            Text(saveUkraineTitle)
-                            Spacer()
-                            Image(systemName: SystemNames.openLink)
-                        }
-                    }
-                    .listRowBackground(Colors.Background.primaryView)
-                    .foregroundColor(Colors.Foreground.label)
-                }
+                LinkView(urlString: Links.Info.saveUkraine, title: saveUkraineTitle)
                 Section {
                     NavigationLink(selfHostingTitle) {
                         SelfHostingView()
@@ -53,35 +43,9 @@ struct SettingsView: View {
                 }
                 .textCase(nil)
                 Section(infoTitle) {
-                    if let sourceCodeURL = URL(string: Links.Info.sourceCode) {
-                        Link(destination: sourceCodeURL) {
-                            HStack {
-                                Text(sourceCodeTitle)
-                                Spacer()
-                                Image(systemName: SystemNames.openLink)
-                            }
-                        }
-                        .listRowBackground(Colors.Background.primaryView)
-                        .foregroundColor(Colors.Foreground.label)
-                    }
-                    HStack {
-                        Text(policyTitle)
-                        Spacer()
-                        Image(systemName: SystemNames.openLink)
-                    }
-                    .listRowBackground(Colors.Background.primaryView)
-                    .foregroundColor(Colors.Foreground.label)
-                    if let licenseURL = URL(string: Links.Info.license) {
-                        Link(destination: licenseURL) {
-                            HStack {
-                                Text(licenceTitle)
-                                Spacer()
-                                Image(systemName: SystemNames.openLink)
-                            }
-                        }
-                        .listRowBackground(Colors.Background.primaryView)
-                        .foregroundColor(Colors.Foreground.label)
-                    }
+                    LinkView(urlString: Links.Info.sourceCode, title: sourceCodeTitle)
+                    LinkView(urlString: Links.Info.privacy, title: policyTitle)
+                    LinkView(urlString: Links.Info.license, title: licenceTitle)
                 }
                 .textCase(nil)
                 Section(supportTitle) {
