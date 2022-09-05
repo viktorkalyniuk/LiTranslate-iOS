@@ -28,6 +28,7 @@ struct SelfHostingView: View {
                     .onAppear {
                         input = instance.selfHostURL
                     }
+                    .listRowBackground(Colors.Background.primaryView)
                     .foregroundColor(Colors.Foreground.label)
             }
             .textCase(nil)
@@ -38,6 +39,7 @@ struct SelfHostingView: View {
                 Text(useInstanceTitle)
                     .foregroundColor(Colors.Foreground.label)
             }
+            .listRowBackground(Colors.Background.primaryView)
             Section(infoTitle) {
                 if let url = URL(string: Links.Info.libreTranslateHosting) {
                     Link(destination: url) {
@@ -50,6 +52,7 @@ struct SelfHostingView: View {
                     }
                 }
             }
+            .listRowBackground(Colors.Background.primaryView)
             .textCase(nil)
         }
         .background(Colors.Background.mainView)

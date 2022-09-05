@@ -23,6 +23,7 @@ struct LanguagesListView: View {
         List {
             Section() {
                 SearchBarView(inputText: $searchText)
+                    .listRowBackground(Colors.Background.primaryView)
             }
             if !recentlyUsedLanguages.array.isEmpty && searchText.isEmpty {
                 Section("Recently Used") {
@@ -38,6 +39,7 @@ struct LanguagesListView: View {
                             dismissView()
                         }
                     }
+                    .listRowBackground(Colors.Background.primaryView)
                 }
                 .textCase(nil)
             }
