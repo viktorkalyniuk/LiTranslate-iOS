@@ -11,4 +11,8 @@ struct Names {
     static let translateTabItemName: String = "Translate"
     static let bookmarksTabItemName: String = "Bookmarks"
     static let settingsTabItemName: String = "Settings"
+
+    struct Images {
+        static let liTranslateIcon: String = "litranslate.fill.icon"
+    }
 }

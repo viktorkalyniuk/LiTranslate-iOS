@@ -19,5 +19,4 @@ class InstanceURL: ObservableObject {
 
         return selfHostURL
     }
-
 }

@@ -37,7 +37,6 @@ struct InputTranslationView: View, KeyboardReadable {
             }
             InputBottomButtons(isKeyboardVisible: $isKeyboardVisible)
         }
-//        .padding()
         .background(Colors.Background.primaryView)
         .cornerRadius(CGFloat(Numbers.twentyFive))
     }
