@@ -3,7 +3,9 @@
 
 ## About
 
-LiTranslate is an application which purpose is a convenient use of open source translation technology.
+LiTranslate is an application which purpose is a convenient use of open source translation technology.\
+\
+[Download on the App Store!](https://apps.apple.com/us/app/litranslate/id1644385339)
 
 ## For developers
 

@@ -49,14 +49,7 @@ struct SettingsView: View {
                 }
                 .textCase(nil)
                 Section(supportTitle) {
-                    #warning("Add logic")
-                    HStack {
-                        Text(rateUsTitle)
-                        Spacer()
-                        Image(systemName: SystemNames.openLink)
-                    }
-                    .listRowBackground(Colors.Background.primaryView)
-                    .foregroundColor(Colors.Foreground.label)
+                    LinkView(urlString: Links.Info.liTranslateAppStore, title: rateUsTitle)
                 }
                 .textCase(nil)
             }
