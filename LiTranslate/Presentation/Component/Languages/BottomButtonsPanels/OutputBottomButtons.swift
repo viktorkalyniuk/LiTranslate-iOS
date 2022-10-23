@@ -12,16 +12,18 @@ struct OutputBottomButtons: View {
     @EnvironmentObject private var textData: TextData
 
     @State private var isSharePresented: Bool = false
+
+    private let synthesize = SpeechSynthesis()
     
     var body: some View {
         HStack() {
             Button {
-                SpeechSynthesis.play(textData.output, language: selection.output)
+                synthesize.play(textData.output, language: selection.output)
             } label: {
                 Image(systemName: SystemNames.speakerWave2)
                     .padding()
             }
-            .disabled(!SpeechSynthesis.canSynthesis(language: selection.output))
+            .disabled(!synthesize.canSynthesis(language: selection.output))
             Spacer()
             Button {
                 UIPasteboard.general.string = textData.output

@@ -48,7 +48,7 @@ struct ContentView: View {
                 .environmentObject(instance)
                 .environmentObject(recentlyUsedLanguages)
                 .tabItem {
-                    Image(Names.Images.liTranslateIcon).font(.system(size: 28))
+                    Image(Names.Images.liTranslateIcon).font(.system(.title))
                     Text(Names.translateTabItemName)
                 }
                 .tag(Numbers.one)

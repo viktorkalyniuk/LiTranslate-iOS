@@ -14,6 +14,13 @@ struct BookmarksView: View {
 
     var body: some View {
         List {
+            Color(uiColor: Colors.UIColors.Background.main)
+                .frame(height: 1)
+                .frame(maxWidth: .infinity)
+                .listRowInsets(EdgeInsets())
+                .listRowSeparatorTint(.clear)
+                .listRowSeparator(.hidden)
+                .listRowBackground(Colors.Background.mainView)
             ForEach(bookmarksData.array, id: \.self) { bookmark in
                 let bookmarkModel = BookmarkModel(
                     inputLanguage: bookmark.inputLanguage,
@@ -23,16 +30,20 @@ struct BookmarksView: View {
                 
                 BookmarkView(tabSelection: $tabSelection,
                              bookmarkModel: bookmarkModel)
+                .listRowBackground(Color.clear)
                 .buttonStyle(.plain)
                 .background(Colors.Background.primaryView)
                 .cornerRadius(CGFloat(Numbers.twentyFive))
+                .listRowSeparator(.hidden)
             }
             .onDelete { IndexSet in
                 bookmarksData.array.remove(atOffsets: IndexSet)
             }
         }
+        .environment(\.defaultMinListRowHeight, 1)
+        .modifier(ScrollContentBackgroundModifier())
         .background(Color(uiColor: .systemGray5))
-        .listStyle(SidebarListStyle())
+        .listStyle(.sidebar)
     }
 }
 

@@ -8,14 +8,23 @@
 import Foundation
 import AVFoundation
 
-struct SpeechSynthesis {
-    static func play(_ string: String, language: Languages) {
+class SpeechSynthesis {
+    private let synthesize = AVSpeechSynthesizer()
+
+    func play(_ string: String, language: Languages) {
         let utterance = AVSpeechUtterance(string: string)
+
+         do {
+             try AVAudioSession.sharedInstance().setCategory(.playback,mode: .default)
+         } catch let error {
+             print("\(error.localizedDescription)")
+         }
+
         utterance.voice = AVSpeechSynthesisVoice(language: language.rawValue)
-        AVSpeechSynthesizer().speak(utterance)
+        synthesize.speak(utterance)
     }
 
-    static func canSynthesis(language: Languages) -> Bool {
+    func canSynthesis(language: Languages) -> Bool {
         let speechVoices = AVSpeechSynthesisVoice.speechVoices()
         for speechVoice in speechVoices {
             if speechVoice.language.prefix(2) == language.rawValue {

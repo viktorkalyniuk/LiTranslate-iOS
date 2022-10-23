@@ -16,15 +16,17 @@ struct InputBottomButtons: View {
 
     private let translateButtonFontSize: CGFloat = CGFloat(Numbers.fourteen)
 
+    private let synthesize = SpeechSynthesis()
+
     var body: some View {
         HStack() {
             Button {
-                SpeechSynthesis.play(textData.input, language: selection.input)
+                synthesize.play(textData.input, language: selection.input)
             } label: {
                 Image(systemName: SystemNames.speakerWave2)
                     .padding()
             }
-            .disabled(!SpeechSynthesis.canSynthesis(language: selection.input))
+            .disabled(!synthesize.canSynthesis(language: selection.input))
             Button {
                 UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
             } label: {

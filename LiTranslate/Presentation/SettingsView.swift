@@ -53,6 +53,7 @@ struct SettingsView: View {
                 }
                 .textCase(nil)
             }
+            .modifier(ScrollContentBackgroundModifier())
             .background(Colors.Background.mainView)
         }
     }

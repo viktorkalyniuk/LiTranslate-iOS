@@ -24,7 +24,7 @@ struct Links {
         static let libreTranslateHosting: String = "https://github.com/LibreTranslate/LibreTranslate#install-and-run"
         static let sourceCode: String = "https://github.com/viktorkalyniuk/LiTranslate-iOS"
         static let license: String = "https://www.gnu.org/licenses/agpl-3.0.en.html"
-        static let privacy: String = "https://github.com/viktorkalyniuk/LiTranslate-iOS/blob/dev/PRIVACY.md"
+        static let privacy: String = "https://github.com/viktorkalyniuk/LiTranslate-iOS/blob/main/PRIVACY.md"
         static let liTranslateAppStore: String = "https://apps.apple.com/us/app/litranslate/id1644385339"
     }
 }
