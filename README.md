@@ -10,6 +10,7 @@ LiTranslate is an application which purpose is a convenient use of open source t
 ## For developers
 
 Any help to improve this application will be appreciated:)\
+Please PR to the dev branch (without assets).\
 Assets can be found on [assets branch](https://github.com/viktorkalyniuk/LiTranslate-iOS/tree/assets).
 
 ## Licence

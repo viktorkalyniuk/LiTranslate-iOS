@@ -55,6 +55,7 @@ struct SelfHostingView: View {
             .listRowBackground(Colors.Background.primaryView)
             .textCase(nil)
         }
+        .modifier(ScrollContentBackgroundModifier())
         .background(Colors.Background.mainView)
         .toolbar {
             Button {

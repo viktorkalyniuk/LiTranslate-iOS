@@ -71,6 +71,7 @@ struct LanguagesListView: View {
             }
             .textCase(nil)
         }
+        .modifier(ScrollContentBackgroundModifier())
         .id(listID)
         .background(Colors.Background.mainView)
         .navigationBarTitleDisplayMode(.inline)
