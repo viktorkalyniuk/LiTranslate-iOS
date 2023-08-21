@@ -8,14 +8,15 @@
 import Foundation
 
 struct TranslationParsing {
-    static func parse(url: String, text: String, inputLanguage: Languages, outputLanguage: Languages, handler: @escaping(TranslationDecode) -> Void) {
+    static func parse(url: String, text: String, inputLanguage: Languages, outputLanguage: Languages, key: String, handler: @escaping(TranslationDecode) -> Void) {
         if let url = URL(string: url) {
             let session = URLSession.shared
             let parameters: [String: String] = [
                 "q": "\(text)",
                 "source": "\(inputLanguage.rawValue)",
                 "target": "\(outputLanguage.rawValue)",
-                "format": "text"
+                "format": "text",
+                "api_key": "\(key)"
             ]
 
             var request = URLRequest(url: url)

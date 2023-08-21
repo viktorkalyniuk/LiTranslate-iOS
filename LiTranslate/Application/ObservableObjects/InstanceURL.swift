@@ -11,6 +11,7 @@ import SwiftUI
 class InstanceURL: ObservableObject {
     @AppStorage(Keys.libreTranslateDefaultURL) var defaultURL: Links.LibreTranslateMirrors = Links.LibreTranslateMirrors.de
     @AppStorage(Keys.libreTranslateSelfHostURL) var selfHostURL: String = ""
+    @AppStorage(Keys.libreTranslateSelfHostKey) var selfHostKey: String = ""
 
     func getURL() -> String {
         if selfHostURL.isEmpty {
@@ -18,5 +19,9 @@ class InstanceURL: ObservableObject {
         }
 
         return selfHostURL
+    }
+    
+    func getKey() -> String {
+        return selfHostKey
     }
 }
