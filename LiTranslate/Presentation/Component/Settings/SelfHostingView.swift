@@ -12,10 +12,13 @@ struct SelfHostingView: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
-    @State private var input: String = ""
+    @State private var inputURL: String = ""
+    @State private var inputKey: String = ""
 
     private let selfHostingTitle = "Self Hosting"
     private let textFieldTitle = "url"
+    private let selfApiTitle = "API Key (if needed)"
+    private let textApiTitle = "key"
     private let useInstanceTitle = "Use default instance"
     private let infoTitle = "Info"
     private let instructionTitle = "Instruction"
@@ -24,9 +27,18 @@ struct SelfHostingView: View {
     var body: some View {
         List {
             Section(selfHostingTitle) {
-                TextField(textFieldTitle, text: $input)
+                TextField(textFieldTitle, text: $inputURL)
                     .onAppear {
-                        input = instance.selfHostURL
+                        inputURL = instance.selfHostURL
+                    }
+                    .listRowBackground(Colors.Background.primaryView)
+                    .foregroundColor(Colors.Foreground.label)
+            }
+            .textCase(nil)
+            Section(selfApiTitle) {
+                TextField(textApiTitle, text: $inputKey)
+                    .onAppear {
+                        inputKey = instance.selfHostKey
                     }
                     .listRowBackground(Colors.Background.primaryView)
                     .foregroundColor(Colors.Foreground.label)
@@ -59,7 +71,8 @@ struct SelfHostingView: View {
         .background(Colors.Background.mainView)
         .toolbar {
             Button {
-                instance.selfHostURL = input
+                instance.selfHostURL = inputURL
+                instance.selfHostKey = inputKey
                 self.mode.wrappedValue.dismiss()
             } label: {
                 Text(doneTitle)
