@@ -17,7 +17,7 @@ struct SelfHostingView: View {
 
     private let selfHostingTitle = "Self Hosting"
     private let textFieldTitle = "url"
-    private let selfApiTitle = "API Key"
+    private let selfApiTitle = "API Key (if needed)"
     private let textApiTitle = "key"
     private let useInstanceTitle = "Use default instance"
     private let infoTitle = "Info"

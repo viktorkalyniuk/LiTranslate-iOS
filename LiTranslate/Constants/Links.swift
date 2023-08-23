@@ -14,9 +14,9 @@ struct Links {
         case de = "https://libretranslate.de/translate"
         case argosopentech = "https://translate.argosopentech.com/translate"
 //        case skitzen = "https://translate.api.skitzen.com/translate"
-        case fortytwo = "https://translate.fortytwo-it.com/translate"
+//        case fortytwo = "https://translate.fortytwo-it.com/translate"
         case terraprint = "https://translate.terraprint.co/translate"
-        case vern = "https://lt.vern.cc/translate"
+//        case vern = "https://lt.vern.cc/translate"
     }
 
     struct Info {
