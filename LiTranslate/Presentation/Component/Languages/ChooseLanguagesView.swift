@@ -27,7 +27,9 @@ struct ChooseLanguagesView: View {
                     .parse(url: instance.getURL(),
                            text: textData.input,
                            inputLanguage: selection.input,
-                           outputLanguage: selection.output) { data in
+                           outputLanguage: selection.output,
+                           key: instance.getKey()
+                    ) { data in
                         DispatchQueue.main.async {
                             textData.output = data.translatedText
                         }
@@ -48,7 +50,9 @@ struct ChooseLanguagesView: View {
                     .parse(url: instance.getURL(),
                            text: textData.input,
                            inputLanguage: selection.input,
-                           outputLanguage: selection.output) { data in
+                           outputLanguage: selection.output,
+                           key: instance.getKey()
+                    ) { data in
                         DispatchQueue.main.async {
                             textData.output = data.translatedText
                         }
